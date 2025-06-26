@@ -28,7 +28,7 @@ Alle Automationen sind als **Blueprints** verfügbar. So einfach funktioniert de
 | 💧 Wassertank zurücksetzen   | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F70d522b2e358cca27c41e225abe3b458%2Fraw%2Fwassertank_ueberwachen.yaml)      |
 | ⏱ Timer & Abschaltung        | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F5382905d489eb4275bd5b57c16ff1849%2Fraw%2Ftimer_und_abschaltung.yaml)      |
 
-👉 Alternativ findest du die Blueprints direkt [hier als Übersicht](https://chatgpt.com/c/%F0%9F%93%A5%20Smart%20Coffee%20Blueprints.md)
+
 
 ---
 
