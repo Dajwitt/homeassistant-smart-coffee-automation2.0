@@ -57,10 +57,8 @@ Jede Automation hat eine ganz bestimmte Aufgabe innerhalb der Logik:
 - 💧 Wassertank zurücksetzen: Setzt einen Zähler zurück, wenn der Tank aufgefüllt wurde – Voraussetzung ist ein Sensor.
 - ⏱ Timer & Abschaltung: Erkennt, wenn die Maschine im Leerlauf ist, und schaltet sie dann automatisch aus.
 
-::: success
 Alle Automationen sind als Blueprints verfügbar.  👉 Klicke auf „Importieren“, um den jeweiligen Blueprint direkt in Home Assistant zu laden.
 
-:::
 
 | Automation                   | Blueprint-Import |
 |------------------------------|------------------|
