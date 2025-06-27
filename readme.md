@@ -33,7 +33,7 @@ Diese Geräte musst du **selbst einfügen** – alle anderen Konfigurationen wer
 Alle benötigten Helfer findest du hier:
 📄 [📦 Smart Coffee Helfer.md](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%93%A6%20Smart%20Coffee%20Helfer.md)
 
-> ⚠️ **Wichtig:** Diese Helfer müssen **exakt so** benannt und übernommen werden, damit die gesamte Logik funktioniert. Bitte **nichts abändern oder kürzen**.
+> ⚠️ **Wichtig:** Diese Helfer müssen **exakt so** benannt und übernommen werden, damit die gesamte Logik funktioniert. Bitte **nichts abändern!!!**.
 
 ---
 
@@ -81,13 +81,14 @@ Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine.
 > 📌 Hinweis: YAML-Modus muss aktiv sein, um das Dashboard direkt per Datei einzufügen. Alternativ können die Karten manuell hinzugefügt werden.
 
 📷 Beispiel:
-![Smart Coffee Dashboard](https://raw.githubusercontent.com/Dajwitt/homeassistant-smart-coffee-automation2.0/main/media/dashboard-overview.png)
+
+<img src="https://github.com/user-attachments/assets/7fc665fa-e27d-436f-8962-43ecba983ed7" width="600"/>
 
 ---
 
 ## 🧪 Ergebnis: Was du bekommst
 
-* Übersicht aller Zubereitungen mit Tages- & Wochenstatistik
+* Übersicht aller Zubereitungen mit Tages- & Wochenstatistik (Normale & Große Tassen)
 * Differenzierung von 1x oder 2x Tassenbezügen
 * Automatische Abschaltung mit Wasserkontrolle
 * Saubere Integration in Home Assistant UI
