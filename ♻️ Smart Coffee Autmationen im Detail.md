@@ -24,7 +24,7 @@ Diese Automation erkennt automatisch, wenn die Kaffeemaschine nach dem Einschalt
 
 ### Ablauf
 
-- Startet, wenn der Stromverbrauch **über 500 W** liegt (**für mindestens 2 Sekunden**).
+- Startet, wenn der Stromverbrauch **über 500 W** liegt.
 - Bedingung: Beide Timer (Standby-Vorwarnung und Idle) müssen `idle` sein (d. h. keine laufende Zubereitung).
 - Setzt den Boolean `spuelvorgang_aktiv` auf **true**.
 - Nach **55 Sekunden** wird dieser Boolean automatisch wieder auf **false** gesetzt.
