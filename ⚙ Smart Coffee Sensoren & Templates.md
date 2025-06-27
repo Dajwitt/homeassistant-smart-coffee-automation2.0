@@ -105,4 +105,3 @@ Nur wenn diese exakt so übernommen werden, funktioniert dein gesamtes System wi
 
 ---
 
-Bereit für die nächsten Schritte? Ich kann dir daraus direkt die fertigen `.yaml`-Dateien für GitHub erzeugen oder dir helfen, den nächsten Teil (Dashboard oder Blueprint-Verknüpfung) anzugehen.
