@@ -7,11 +7,17 @@ Willkommen zur Version 2.0 des Smart-Coffee-Projekts für Home Assistant. Dieses
 ## 📚 Funktionsübersicht
 
  ✅ Automatische Erkennung von Kaffeezubereitungen  
+ 
  ✅ Differenzierung zwischen 1 und 2 Tassen  
+ 
  ✅ Zählung aller Vorgänge (inkl. täglicher & wöchentlicher Statistik)  
+ 
  ✅ Spülvorgänge werden korrekt ignoriert  
+ 
  ✅ Automatische Abschaltung der Maschine ohne Spülen  
+ 
  ✅ Integration eines Wasserstand-Sensors mit Reset-Zähler  
+ 
  ✅ Kompaktes Dashboard für Übersicht und Kontrolle
 
 ---
