@@ -16,19 +16,44 @@ Willkommen zur Version 2.0 des Smart-Coffee-Projekts für Home Assistant. Dieses
 
 ---
 
-## 🔧 Voraussetzungen: Was du brauchst
+## 🔧 **Voraussetzungen: Was du brauchst**
 
-Damit alle Automationen und Auswertungen korrekt funktionieren, benötigst du folgende Geräte in deinem Home Assistant Setup:
+Damit alle Automationen und Auswertungen korrekt funktionieren, benötigst du folgende Komponenten in deinem Home Assistant Setup:
 
-* ✅ **Power Sensor**: z. B. Shelly Plug S zur Leistungsmessung
-* ✅ **Switch**: zum Ein-/Ausschalten der Kaffeemaschine (oft im Plug enthalten)
-* ✅ **(Optional)** Binary-Sensor am Wassertank (z. B. über Reed-Kontakt)
+✅ **Smart-Relaisschalter** (z. B. Shelly 1PM Gen 2/3/4) zur Leistungsmessung
 
-Diese Geräte musst du **selbst einfügen** – alle anderen Konfigurationen werden vollständig bereitgestellt.
+✅ **Kontaktsensor** (z. B. Aqara Tür-/Fensterkontakt) am Wassertank
+
+✅ **Home Assistant Companion App** für mobile Benachrichtigungen
+
+✅ **Erfasste Daten:**
+– Zeit bis zum Standby
+– Dauer der Zubereitung
+– Leistungsaufnahme (Watt) beim Einschalten und während der Zubereitung
+
+✅ **Optional: Sprachassistent** (z. B. Amazon Echo) für akustische Hinweise
+
+**Hinweis:** Den Smart-Relaisschalter und den Kontaktsensor musst du selbst in Home Assistant einbinden. Alle übrigen Konfigurationen werden vollständig durch dieses Projekt bereitgestellt.
 
 ---
 
-## 📦 Schritt 1: Helfer anlegen
+## 📦 **Schritt 1: Welche Daten brauchst du?**
+
+Bevor du startest, solltest du folgende Informationen über deine Kaffeemaschine kennen:
+
+⏱️ **Standby-Zeit:** Wie lange bleibt die Maschine nach dem Einschalten aktiv, bevor sie automatisch abschaltet?
+
+☕ **Zubereitungsdauer:** (Voreingestellt)
+– Eine Tasse: unter 60 Sekunden 
+– Zwei Tassen: ab 60 Sekunden
+
+⚡ **Leistungsaufnahme (Watt):**
+– Beim Einschalten (voreingestellt: 500 W)
+– Während der Zubereitung (voreingestellt: 1000 W)
+
+---
+
+## 📦 Schritt 2: Helfer anlegen
 
 Alle benötigten Helfer findest du hier:
 📄 [📦 Smart Coffee Helfer.md](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%93%A6%20Smart%20Coffee%20Helfer.md)
@@ -37,7 +62,7 @@ Alle benötigten Helfer findest du hier:
 
 ---
 
-## ⚙ Schritt 2: Sensoren & Templates einfügen
+## ⚙ Schritt 3: Sensoren & Templates einfügen
 
 Hier werden die Template-Sensoren, Binary-Sensoren und Statistiken angelegt:
 📄 [⚙ Smart Coffee Sensoren & Templates.md](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%E2%9A%99%20Smart%20Coffee%20Sensoren%20%26%20Templates.md)
@@ -46,7 +71,7 @@ Hier werden die Template-Sensoren, Binary-Sensoren und Statistiken angelegt:
 
 ---
 
-## 📥 Schritt 3: Automationen per Blueprint importieren
+## 📥 Schritt 4: Automationen per Blueprint importieren
 
 Jede Automation hat eine ganz bestimmte Aufgabe innerhalb der Logik:
 
@@ -72,7 +97,7 @@ Alle Automationen sind als **Blueprints** verfügbar.
 
 ---
 
-## 💻 Schritt 4: Dashboard importieren
+## 💻 Schritt 5: Dashboard importieren
 
 Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine.
 
