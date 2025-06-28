@@ -76,4 +76,4 @@ timer:
 
 ```
 
-> 💡 **Hinweis:** Die drei Timer (`standby_vorwarnung`, `idle_shutdown`, `debug_timer`) **müssen in der** `configuration.yaml` **gepflegt werden**, da Timer nach der Erstellung **nicht über die UI bearbeitet** werden können.
+> 💡 **Hinweis:** Die drei Timer (`standby_vorwarnung`, `idle_shutdown`, `debug_timer`) **müssen in der** `configuration.yaml` **gepflegt werden**, da diese Timer nach der Erstellung **nicht über die UI bearbeitet** werden können. Passe **duration:** der Timer nach deinen Bedürfnissen an. Siehe auch [Smart Coffee FAQ](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%92%AC%20Smart%20Coffee%20FAQ.md)
