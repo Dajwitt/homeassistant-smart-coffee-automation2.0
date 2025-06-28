@@ -31,7 +31,7 @@ template:
         unique_id: kaffeetank_fuellstand_prozent
         unit_of_measurement: "%"
         state: >
-          {% set max_tassen = 5 %} #Ersetzen
+          {% set max_tassen = 5 %} # Die 5 ersetzen
           {% set counter = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
           {% set prozent = 100 - ((counter / max_tassen) * 100) %}
           {{ [prozent, 0] | max | round(0) }}
@@ -41,7 +41,7 @@ template:
         unit_of_measurement: "Tassen"
         icon: mdi:coffee-outline
         state: >
-          {% set max_tassen = 5 %} #Ersetzeen 
+          {% set max_tassen = 5 %} # Die 5 ersetzen 
           {% set counter = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
           {% set remaining = max_tassen - counter %}
           {{ [remaining, 0] | max }}
