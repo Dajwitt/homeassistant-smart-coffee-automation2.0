@@ -1,22 +1,5 @@
 ## **💬 Smart Coffee** FAQ
 
----
-
-### Warum gibt es zwei Timer und welche Funktion haben sie?
-
-Bevor du die Timer konfigurierst, finde zunächst heraus, **wann sich deine Kaffeemaschine nach der letzten Zubereitung automatisch in den Standby-Modus versetzt**. Diese Zeit teilst du anschließend auf zwei Timer auf – je nachdem, ob du das automatische Spülen **verhindern** oder **zulassen** möchtest.
-
-📌 **Beispiel: Deine Maschine schaltet sich nach 60 Minuten automatisch ab:**
-
-- **Spülen verhindern:**  
-   → Timer 1: 40 Minuten + Timer 2: 15 Minuten = 55 Minuten  
-   (Die Maschine wird kurz vor dem Spülen abgeschaltet.)
-- **Spülen zulassen:**  
-   → Timer 1: 50 Minuten + Timer 2: 15 Minuten = 65 Minuten  
-   (Die Maschine schaltet nach dem Spülen ab.)
-
-💡 Tipp:  
- Nach Ablauf des ersten Timers (z. B. nach 40 Minuten) kannst du dich zusätzlich **benachrichtigen lassen**, dass die Maschine bald ausgehen wird.
 
 ---
 
@@ -90,24 +73,5 @@ eine Benachrichtigung einrichten, die dich warnt, dass der **Wassertank leer** i
 
 💡 **Hinweis:**  
 Benachrichtigungen lassen sich **ganz flexibel auch in anderen Automationen integrieren** – je nach Bedarf. Deiner Kreativität sind dabei keine Grenzen gesetzt.
-
----
-
-### Wie passe ich den Füllstand an meine Maschine an?
-
-Der Füllstand des Wassertanks wird **automatisch berechnet** – für Prozent und verbleibende Tassen.
-Du musst in beiden Sensoren nur **eine einzige Zeile** anpassen:
-
-```jinja2
-{% set max_tassen = 5 %}
-```
-
-➡️ Ersetze die **5** durch die maximale Anzahl an Kaffeezubereitungen, die deine Maschine mit einer Tankfüllung schafft..
-
-💡 Beispiel: Für eine Maschine mit 7 Tassen:
-
-```jinja2
-{% set max_tassen = 7 %}
-```
 
 ---
