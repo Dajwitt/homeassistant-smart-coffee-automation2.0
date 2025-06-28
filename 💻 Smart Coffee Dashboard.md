@@ -237,26 +237,7 @@ views:
             vertical: false
             hide_state: true
       - type: grid
-        cards:
-          - type: heading
-            icon: mdi:test-tube
-            heading: Test
-            heading_style: title
-          - type: custom:mushroom-chips-card
-            chips:
-              - type: entity
-                entity: input_boolean.dummy_helfer
-                content_info: name
-                tap_action:
-                  action: perform-action
-                  perform_action: script.zahler_tassengrose_zurucksetzen
-                  target: {}
-                name: 'Zähler Reset       '
-                icon: mdi:restart
-      - type: grid
-        cards:
-          - type: heading
-            heading: Neuer Abschnitt
+        cards: []
     cards: []
     badges: []
     header:
@@ -264,6 +245,7 @@ views:
         type: markdown
         text_only: true
         content: '# Kaffeemaschine  ✨'
+
 ```
 
 - Ersetze den vorhandenen YAML-Inhalt komplett damit
