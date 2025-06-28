@@ -4,7 +4,7 @@
 
 - Alle **Sensoren**, **Helfer**, **Timer** und **Automation**-Blueprints müssen vorher wie in den Anleitungen beschrieben eingebunden worden sein.
 - Dieses Dashboard dient der **Übersicht und Steuerung** der Kaffeemaschine und basiert exakt auf der empfohlenen Struktur.
-- Die Datei findest du in diesem Projekt unter: `Dashboard.yaml`
+
 
 ---
 
@@ -17,15 +17,14 @@ Gehe in der Seitenleiste zu **Einstellungen → Dashboards → Dashboard hinzuf�
 #### 2. **Neues Dashboard erstellen**
 
 - Name: z. B. `Kaffeemaschine`
-- URL (Pfad): z. B. `tablet`
 - Sichtbarkeit: Sichtbar lassen
 - Speichern
 
 #### 3. **Dashboard öffnen und in den YAML-Modus wechseln**
 
 - Öffne das neu erstellte Dashboard
-- Oben rechts auf die drei Punkte `⋮` klicken → **"Dashboard bearbeiten"**
-- Wieder oben rechts auf `⋮` → **"In YAML bearbeiten"**
+- Oben rechts auf ✏ klicken → **"Dashboard bearbeiten"**
+- Wieder oben rechts auf `⋮` → **"Raw-Konfigurationseditor"**
 
 #### 4. **Inhalte einfügen**
 
@@ -261,7 +260,6 @@ Du kannst das Dashboard jetzt sofort nutzen. Alle relevanten Karten und Abschnit
 - Wassertankanzeige
 - Statistik
 - Timer-Steuerung
-- Testfunktionen
 
 …sind bereits **vollständig eingebunden**.
 
