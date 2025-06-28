@@ -14,7 +14,7 @@ Willkommen zur Version 2.0 des Smart-Coffee-Projekts für Home Assistant. Dieses
  
  ✅ Spülvorgänge ignorieren (Optional)
  
- ✅ Automatische Abschaltung der Maschine mit oder ohne Spülen vor dem Standby  
+ ✅ Automatische Abschaltung der Maschine mit oder ohne spülen vor dem Standby  
  
  ✅ Integration eines (Wasserstand-Sensors) mit Reset-Zähler  
  
@@ -131,7 +131,6 @@ Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine.
 ## 💬 Hinweise & FAQ
 
 * Warum ich dieses Projekt erstellt habe? [Blueprints-Bereich der Community](https://community.home-assistant.io/c/blueprints-exchange/53)
-* Was du noch wissen musst! [Blueprints-Bereich der Community](https://community.home-assistant.io/c/blueprints-exchange/53)
 * FAQ [Blueprints-Bereich der Community](https://community.home-assistant.io/c/blueprints-exchange/53)
 
 
