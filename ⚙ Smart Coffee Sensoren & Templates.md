@@ -46,24 +46,6 @@ template:
           {% set remaining = max_counter - counter_value %}
           {{ [remaining, 0] | max }}
 
-      - name: Letzte Tassengröße
-        unique_id: letzte_kaffeegroeße
-        state: >-
-          {% set dauer = states('input_number.kaffeemaschine_letzte_bruehdauer') | float(0) %}
-          {% if dauer < 1 %}
-            Standby
-          {% elif dauer < 14 %}
-            Zubereitung läuft
-          {% elif dauer <= 35 %}
-            Espresso klein
-          {% elif dauer <= 44 %}
-            Espresso groß
-          {% elif dauer <= 60 %}
-            Normale Tasse
-          {% else %}
-            Große Tasse
-          {% endif %}
-        icon: mdi:coffee
 ```
 ---
 
