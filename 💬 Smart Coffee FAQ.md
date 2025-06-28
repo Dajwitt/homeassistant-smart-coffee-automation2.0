@@ -1,8 +1,8 @@
 ## **💬 Smart Coffee** FAQ
 
-<details>
-<summary>Warum gibt es zwei Timer und welche Funktion haben sie?</summary>
-##### 
+---
+
+### Warum gibt es zwei Timer und welche Funktion haben sie?
 
 Bevor du die Timer konfigurierst, finde zunächst heraus, **wann sich deine Kaffeemaschine nach der letzten Zubereitung automatisch in den Standby-Modus versetzt**. Diese Zeit teilst du anschließend auf zwei Timer auf – je nachdem, ob du das automatische Spülen **verhindern** oder **zulassen** möchtest.
 
@@ -18,20 +18,20 @@ Bevor du die Timer konfigurierst, finde zunächst heraus, **wann sich deine Kaff
 💡 Tipp:  
  Nach Ablauf des ersten Timers (z. B. nach 40 Minuten) kannst du dich zusätzlich **benachrichtigen lassen**, dass die Maschine bald ausgehen wird.
 
-</details>
+---
 
-<details>
-<summary>Soll ich das automatische Spülen verhindern?</summary>
-##### 
+
+### Soll ich das automatische Spülen verhindern?
 
 Das hängt von deinem Nutzerverhalten ab. Ich persönlich **verzichte auf das Spülen vor dem Abschalten**, weil mein Wassertank eher klein ist – so bekomme ich noch eine Tasse mehr, bevor er leer ist.
 
 ✅ **Wenn du das Spülen zulassen möchtest**, dann stelle deine Timer so ein, dass die Abschaltung **nach dem Spülvorgang** erfolgt (siehe vorherige Frage).
 
-</details>
+---
 
-<details>
-<summary>Warum spült meine Maschine direkt nach dem 3-Sekunden-Reset?</summary>
+
+### Warum spült meine Maschine direkt nach dem 3-Sekunden-Reset?
+
 
 Nicht alle Kaffeevollautomaten verhalten sich gleich. Die Reaktion nach einem kurzen **Ein-/Ausschaltvorgang (z. B. 3 Sekunden)** hängt vom Modell ab:
 
@@ -46,11 +46,10 @@ Nicht alle Kaffeevollautomaten verhalten sich gleich. Die Reaktion nach einem ku
 
 💡 Jeder Maschinentyp reagiert etwas anders – passe daher die Automation an das Verhalten deiner Maschine an.
 
-</details>
+---
 
-<details>
-<summary>Wie übernehme ich die Kontrolle über die Blueprint-Automation?</summary>
-##### 
+
+### Wie übernehme ich die Kontrolle über die Blueprint-Automation?
 
 Sobald du die Blueprint **importiert, ausgefüllt und gespeichert** hast, gehe wie folgt vor:
 
@@ -62,10 +61,10 @@ Sobald du die Blueprint **importiert, ausgefüllt und gespeichert** hast, gehe w
 
 Nun kannst du die Automation manuell bearbeiten.
 
-</details>
+---
 
-<details>
-<summary>Wo stelle ich die Benachrichtigungen ein?</summary>
+### Wo stelle ich die Benachrichtigungen ein?
+
 
 #### ☕ Automation: **Timer & Abschaltung**
 
@@ -92,4 +91,4 @@ eine Benachrichtigung einrichten, die dich warnt, dass der **Wassertank leer** i
 💡 **Hinweis:**  
 Benachrichtigungen lassen sich **ganz flexibel auch in anderen Automationen integrieren** – je nach Bedarf. Deiner Kreativität sind dabei keine Grenzen gesetzt.
 
-</details>
+
