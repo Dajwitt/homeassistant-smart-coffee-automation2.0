@@ -2,13 +2,14 @@
 
 Diese Seite erklärt im Detail alle Automationen, die das Herzstück dieses Projekts bilden. Jede Automation ist über Blueprints realisiert und basiert auf klar definierten Helfern, Sensoren und Zustandsabfragen. Ziel ist eine vollautomatische Steuerung und Auswertung der Kaffeemaschinenaktivität. Alle Blueprints sind miteinander verzahnt und greifen über Hilfsentitäten (Booleans, Zahlen, Timer) ineinander – für ein stabiles und zuverlässiges System.
 
+> 📌 Hinweis: Alle Einstellungen sind voreingestellt und können auf deine Maschine angepasst werden!
 ---
 
 ## 🌐 Übersicht
 
 **Folgende Automationen sind im Projekt enthalten:**
 
-1. 😀 Spülvorgang erkennen
+1. 🌀 Spülvorgang erkennen
 2. ☕️ Zubereitung erkennen
 3. 🍵 Tassengröße erkennen nach Zubereitung
 4. 💧 Wassertank-Zähler zurücksetzen
@@ -16,7 +17,7 @@ Diese Seite erklärt im Detail alle Automationen, die das Herzstück dieses Proj
 
 ---
 
-## 😀 1. Spülvorgang erkennen
+## 🌀 1. Spülvorgang erkennen
 
 ### Funktion
 
@@ -25,7 +26,7 @@ Diese Automation erkennt automatisch, wenn die Kaffeemaschine nach dem Einschalt
 ### Ablauf
 
 - Startet, wenn der Stromverbrauch **über 500 W** liegt.
-- Bedingung: Beide Timer (Standby-Vorwarnung und Idle) müssen `idle` sein (d. h. keine laufende Zubereitung).
+- Bedingung: Beide Timer (Standby-Vorwarnung und Idle) müssen `idle` sein 
 - Setzt den Boolean `spuelvorgang_aktiv` auf **true**.
 - Nach **55 Sekunden** wird dieser Boolean automatisch wieder auf **false** gesetzt.
 - Gleichzeitig wird der Abschalt-Timer erneut gestartet, um den Energiesparzyklus aufrechtzuerhalten.
@@ -71,25 +72,20 @@ Analysiert die in der vorherigen Automation gespeicherte Zubereitungsdauer und b
 - Trigger: Neue Zubereitungsdauer wurde gespeichert.
 - Wenn `spuelvorgang_aktiv` ist → **Abbruch**.
 - Daueranalyse:
-  - **15–59 Sek.** → Counter `counter.tasse_1x` wird erhöht, Anzeige: "1 Tasse"
-  - **60+ Sek.** → Counter `counter.tasse_2x` wird erhöht, Anzeige: "2 Tassen"
-- Ergebnis wird im Dashboard dargestellt (inkl. Farbcode, Text, Zähler).
-
+  - **15–59 Sek.** → Counter `Normale Tasse` wird erhöht
+  - **60+ Sek.** → Counter `Große Tasse` wird erhöht
+- Ergebnis wird im Dashboard dargestellt
 ---
 
 ## 💧 4. Wassertank-Zähler zurücksetzen
 
 ### Funktion
 
-Zählt den geschätzten Wasserverbrauch basierend auf den Brühvorgängen. Wenn der Wasserstandssensor meldet, dass der Tank leer ist, wird der Zähler automatisch zurückgesetzt.
+Diese Automation überwacht den Kaffezubereitungs Zähler und wertet seinen Status aus. Sobald der Zähler über 5 steigt, löst die Automation eine Benachrichtigung aus, dass der Wasertank leer ist und startet einen 5 Minuten Timmer. In diesen 5 Minuten hast du genügend Zeit den Wassertank neu zu befüllen. Setzt du den Wassertank wieder ein, wird der Zubereitungszähler auf Null zurückgesetzt und im Dashboard wird 100 % angezeigt.
 
-### Ablauf
+Solltest du den Wassertank nicht innerhalb der 5 Minuten Nachfüllen, schaltet sich die Maschine aus. Das ist eine weiter indirekte erinnerung, dass der Wassertank leer ist. Schaltest du die Maschine wieder ein und der Zubereitungszähler ist immer noch über 5 bekommst du eine weitere Benachrichtiging.
 
-- Trigger: Wassersensor schaltet auf `off` (leer).
-- Aktion:
-  - Sprachbenachrichtigung wird abgespielt.
-  - Wasserzähler wird auf **0** gesetzt.
-  - Der Boolean `reset_erkannt` wird für das Dashboard aktiviert und nach kurzer Zeit wieder deaktiviert.
+Du kannst jetzt trotzdem einen Kaffee zubereiten, aber deine Tasse wird vielleicht nicht ganz voll.
 
 ### Ziel
 
@@ -109,24 +105,19 @@ Schaltet die Kaffeemaschine automatisch ab, wenn **längere Zeit keine Nutzung**
   - Wird nach jeder Zubereitung gestartet
 - **Timer 2: Vorwarn-Timer (z. B. 15 Minuten)**
   - Wird nach Ablauf von Timer 1 gestartet
-- Wenn Timer 2 ebenfalls abläuft:
+- **Wenn Timer 2 ebenfalls abläuft**
   - Kaffeemaschine wird **kurz aus- und wieder eingeschaltet**
   - Dadurch wird KEIN Spülvorgang ausgelöst
 
 ### Ziel
 
-Automatische Abschaltung **ohne Spülen** zur Schonung der Maschine und Reduktion unnötiger Laufzeiten.
+Automatische Abschaltung **ohne Spülen** Die Maschiene kann auch nach dem Spülen und auomatischen Ausschalten vom Strom getrennt werden.
 
 ---
 
 ## 🔗 Hinweise zur Nutzung
 
 - Alle Automationen sind als **Blueprints** verfügbar.
-- Das Zusammenspiel funktioniert nur, wenn **alle Helfer, Sensoren und Timer exakt übernommen werden** (siehe Projektanleitung).
-- Besonders wichtig:
-  - `input_boolean.kaffeemaschine_spuelvorgang_aktiv`
-  - `input_number.kaffeemaschine_zubereitungsdauer`
-  - `counter.kaffeemaschine_zubereitungen`
-  - `sensor.kaffeemaschine_power` (Power-Messung)
+- Das Zusammenspiel funktioniert nur, wenn **alle Helfer, Sensoren und Timer exakt übernommen werden**
 
 **Bitte folge exakt der Anleitung, damit alle Verknüpfungen zwischen den Automationen korrekt greifen.**
