@@ -12,11 +12,11 @@ Willkommen zur Version 2.0 des Smart-Coffee-Projekts für Home Assistant. Dieses
  
  ✅ Zählung aller Vorgänge (inkl. täglicher & wöchentlicher Statistik)  
  
- ✅ Spülvorgänge werden korrekt ignoriert  
+ ✅ Spülvorgänge ignorieren (Optional)
  
- ✅ Automatische Abschaltung der Maschine ohne Spülen  
+ ✅ Automatische Abschaltung der Maschine mit oder ohne Spülen vor dem Standby  
  
- ✅ Integration eines Wasserstand-Sensors mit Reset-Zähler  
+ ✅ Integration eines (Wasserstand-Sensors) mit Reset-Zähler  
  
  ✅ Kompaktes Dashboard für Übersicht und Kontrolle
 
@@ -30,14 +30,16 @@ Damit alle Automationen und Auswertungen korrekt funktionieren, benötigst du fo
 
 ✅ **Kontaktsensor** (z. B. Aqara Tür-/Fensterkontakt) am Wassertank
 
-✅ **Home Assistant Companion App** für mobile Benachrichtigungen
-
 ✅ **Erfasste Daten:**
 – Zeit bis zum Standby
 – Dauer der Zubereitung
 – Leistungsaufnahme (Watt) beim Einschalten und während der Zubereitung
 
-✅ **Optional: Sprachassistent** (z. B. Amazon Echo) für akustische Hinweise
+## **Optional**
+
+✅ **Sprachassistent** (z. B. Amazon Echo) für akustische Hinweise
+
+✅ **Home Assistant Companion App** für mobile Benachrichtigungen
 
 **Hinweis:** Den Smart-Relaisschalter und den Kontaktsensor musst du selbst in Home Assistant einbinden. Alle übrigen Konfigurationen werden vollständig durch dieses Projekt bereitgestellt.
 
@@ -126,14 +128,12 @@ Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine.
 
 ---
 
-## ℹ️ Hinweise & Community
+## 💬 Hinweise & FAQ
 
-* YAML-Modus wird empfohlen für volle Kontrolle
-* Entitäten dürfen nicht umbenannt werden
-* Änderungen an Templates oder Sensoren stören die Automationslogik
+* Warum ich dieses Projekt erstellt habe? [Blueprints-Bereich der Community](https://community.home-assistant.io/c/blueprints-exchange/53)
+* Was du noch wissen musst! [Blueprints-Bereich der Community](https://community.home-assistant.io/c/blueprints-exchange/53)
+* FAQ [Blueprints-Bereich der Community](https://community.home-assistant.io/c/blueprints-exchange/53)
 
-💬 Du hast Feedback oder Fragen?
-👉 Besuche den [Blueprints-Bereich der Community](https://community.home-assistant.io/c/blueprints-exchange/53)
 
 ---
 
