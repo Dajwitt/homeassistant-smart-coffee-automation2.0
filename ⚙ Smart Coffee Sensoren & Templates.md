@@ -1,32 +1,20 @@
 ## Anleitung: Sensoren & Templates korrekt einfügen
 
-Damit alle Automationen, Blueprints und das Dashboard reibungslos funktionieren, **müssen die folgenden Sensoren und Templates exakt wie beschrieben eingefügt werden**.
+Damit alle Automationen, Blueprints und das Dashboard reibungslos funktionieren, **müssen die folgenden Sensoren und Templates exakt wie beschrieben in die configuration.yaml eingefügt werden**.
 
 ---
 
-### ✏️ Schritt 1: Zwei Dateien anlegen
+## ⚠️ Wichtige Hinweise
 
-Lege in deinem  Home Assistant Config-Verzeichnis zwei Dateien an:
-
-1. `template_sensors.yaml`  ✨ Enthält *alle* Template- und Binary-Sensoren
-2. `history_stats.yaml`     ⚖️ Enthält *alle* Statistik-Sensoren (History Stats)
-
----
-
-### ✏️ Schritt 2: Verweise in `configuration.yaml` eintragen
-
-In deiner `configuration.yaml` fügst du folgenden Eintrag ein:
-
-```yaml
-sensor: !include history_stats.yaml
-template: !include template_sensors.yaml
-```
-
-> ⚠️ Achte auf Einrückungen! Keine Tabs, nur Leerzeichen verwenden.
+- Verwende ausschließlich **Leerzeichen**, keine Tabs!
+- Die Einrückung muss exakt stimmen (2 Leerzeichen pro Ebene).
+- `template:` und `sensor:` dürfen **nur je einmal** in der Datei vorkommen. Wenn bereits vorhanden, **einfach erweitern**.
 
 ---
 
-### 📃 Inhalt `template_sensors.yaml`
+## 🧩 Schritt 1: Template-Sensoren einfügen
+
+Füge folgenden Abschnitt in den Bereich `template:` deiner `configuration.yaml` ein:
 
 ```yaml
 template:
@@ -77,10 +65,11 @@ template:
           {% endif %}
         icon: mdi:coffee
 ```
-
 ---
 
-### 📊 Inhalt `history_stats.yaml`
+## 📊 Schritt 2: Statistik-Sensoren einfügen
+
+Füge diesen Abschnitt in den Bereich sensor: deiner configuration.yaml ein:
 
 ```yaml
 sensor:
@@ -106,6 +95,8 @@ sensor:
       {{ monday }}
     end: "{{ now() }}"
 ```
+
+💡 Tipp: Wenn du schon andere **sensor:-Einträge** hast, **ergänze** diese einfach – du brauchst den Abschnitt sensor: **nur einmal** in der Datei.
 
 ---
 
