@@ -91,4 +91,23 @@ eine Benachrichtigung einrichten, die dich warnt, dass der **Wassertank leer** i
 💡 **Hinweis:**  
 Benachrichtigungen lassen sich **ganz flexibel auch in anderen Automationen integrieren** – je nach Bedarf. Deiner Kreativität sind dabei keine Grenzen gesetzt.
 
+---
 
+### Wie passe ich den Füllstand an meine Maschine an?
+
+Der Füllstand des Wassertanks wird **automatisch berechnet** – für Prozent und verbleibende Tassen.
+Du musst in beiden Sensoren nur **eine einzige Zeile** anpassen:
+
+```jinja2
+{% set max_tassen = 5 %}
+```
+
+➡️ Ersetze die **5** durch die maximale Anzahl an Kaffeezubereitungen, die deine Maschine mit einer Tankfüllung schafft..
+
+💡 Beispiel: Für eine Maschine mit 7 Tassen:
+
+```jinja2
+{% set max_tassen = 7 %}
+```
+
+---
