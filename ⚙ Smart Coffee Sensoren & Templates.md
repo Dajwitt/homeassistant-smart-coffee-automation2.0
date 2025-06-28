@@ -15,6 +15,14 @@ Damit alle Automationen, Blueprints und das Dashboard reibungslos funktionieren,
 ## 🧩 Schritt 1: Template-Sensoren einfügen
 
 Füge folgenden Abschnitt in den Bereich `template:` deiner `configuration.yaml` ein:
+ 
+ 💡 **Hinweis:** Die Prozentanzeige des Wassertanks wird **automatisch berechnet**. Du musst nur **eine einzige Zeile in beiden Template-Sensoren anpassen**:
+
+```jinja2
+{% set max_tassen = 5 %}
+```
+
+➡️ Ersetze die `5` durch die maximale Anzahl an Kaffeezubereitungen, die deine Maschine mit einer Tankfüllung schafft..
 
 ```yaml
 template:
@@ -23,27 +31,19 @@ template:
         unique_id: kaffeetank_fuellstand_prozent
         unit_of_measurement: "%"
         state: >
-          {% set counter_value = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
-          {% set mapping = {
-            0: 100,
-            1: 83,
-            2: 67,
-            3: 50,
-            4: 33,
-            5: 17,
-            6: 0
-          } %}
-          {{ mapping[counter_value] }}
-        icon: mdi:water-percent
+          {% set max_tassen = 5 %} #Ersetzen
+          {% set counter = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
+          {% set prozent = 100 - ((counter / max_tassen) * 100) %}
+          {{ [prozent, 0] | max | round(0) }}
 
       - name: "Kaffeetank Füllstand Tassen"
         unique_id: kaffeetank_fuellstand_tassen
         unit_of_measurement: "Tassen"
         icon: mdi:coffee-outline
         state: >
-          {% set counter_value = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
-          {% set max_counter = 5 %}
-          {% set remaining = max_counter - counter_value %}
+          {% set max_tassen = 5 %} #Ersetzeen 
+          {% set counter = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
+          {% set remaining = max_tassen - counter %}
           {{ [remaining, 0] | max }}
 
 ```
