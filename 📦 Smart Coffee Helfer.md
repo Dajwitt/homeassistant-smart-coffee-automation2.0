@@ -1,7 +1,27 @@
+## Warum gibt es zwei Timer und welche Funktion haben sie?
+
+Bevor du die Timer konfigurierst, finde zunächst heraus, wann sich deine Kaffeemaschine nach der letzten Zubereitung automatisch in den Standby-Modus versetzt. Diese Zeit teilst du anschließend auf zwei Timer auf – je nachdem, ob du das automatische Spülen verhindern oder zulassen möchtest.
+
+## 📌 Beispiel: Deine Maschine schaltet sich nach 60 Minuten automatisch ab:
+
+**Spülen verhindern:**
+
+→ Timer 1: 40 Minuten + Timer 2: 15 Minuten = 55 Minuten
+(Die Maschine wird kurz vor dem Spülen abgeschaltet.)
+
+**Spülen zulassen:**
+
+→ Timer 1: 50 Minuten + Timer 2: 15 Minuten = 65 Minuten
+(Die Maschine schaltet nach dem Spülen ab.)
+
+---
+
+> ⚠️  Die drei Timer (`standby_vorwarnung`, `idle_shutdown`, `debug_timer`) **müssen in der** `configuration.yaml` **gepflegt werden**, da diese Timer nach der Erstellung **nicht über die UI bearbeitet** werden können. Passe **duration:** der Timer nach deinen Bedürfnissen an.
+
 ### 🧾 Anleitung zur Integration der Helfer:
 
-1. Öffne deine Home Assistant `configuration.yaml`.
-2. Füge den folgenden Block hinzu – entweder am Ende oder unter dem Abschnitt `input_boolean`, `input_number`, `input_text`, `counter`, `timer`, wenn du ihn schon verwendest:
+  1. Öffne deine Home Assistant `configuration.yaml`.
+  2. Füge den folgenden Block hinzu – entweder am Ende oder unter dem Abschnitt `input_boolean`, `input_number`, `input_text`, `counter`, `timer`, wenn du ihn schon verwendest:
 
 ```
 # 📦 Smart Coffee Automatisierung: Helfer
@@ -76,4 +96,4 @@ timer:
 
 ```
 
-> 💡 **Hinweis:** Die drei Timer (`standby_vorwarnung`, `idle_shutdown`, `debug_timer`) **müssen in der** `configuration.yaml` **gepflegt werden**, da diese Timer nach der Erstellung **nicht über die UI bearbeitet** werden können. Passe **duration:** der Timer nach deinen Bedürfnissen an. Siehe auch [Smart Coffee FAQ](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%92%AC%20Smart%20Coffee%20FAQ.md)
+
