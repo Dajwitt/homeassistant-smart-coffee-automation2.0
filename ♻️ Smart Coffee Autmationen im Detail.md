@@ -87,18 +87,29 @@ Diese Automation überwacht den Kaffeezubereitungs-Zähler und leitet daraus den
 
 ### Ablauf
 
-* **Zählerüberwachung & Benachrichtigung:** Sobald der Kaffeezubereitungs-Zähler über einen vordefinierten Schwellenwert (z.B. 5 Tassen, anpassbar an deine Maschine) steigt, wird ein 5-Minuten-Timer (`kaffeemaschine_wasser_nachfuell_prompt`) gestartet. Gleichzeitig wird ein Trigger (`sprachbenachrichtigung_ausloeser_wassertank`) für Benachrichtigungen aktiviert, der signalisiert, dass der Wassertank wahrscheinlich leer ist.
-    * Du hast nun **5 Minuten Zeit**, den Wassertank zu befüllen.
-* **Wassertank befüllt:** Sobald du den Wassertank wieder einsetzt (erkannt durch den Türkontakt am Wassertank), wird der Zubereitungszähler (`counter.kaffeemaschine_zubereitungen`) auf Null zurückgesetzt. Im Dashboard wird dann wieder 100 % Füllstand angezeigt.
-* **Automatische Abschaltung bei Nicht-Befüllen:** Solltest du den Wassertank nicht innerhalb der 5 Minuten nachfüllen, schaltet sich die Kaffeemaschine automatisch aus. Dies dient als weitere, indirekte Erinnerung, dass der Wassertank leer ist.
-* **Erneute Benachrichtigung:** Wenn du die Maschine wieder einschaltest und der Zubereitungszähler immer noch über dem Schwellenwert liegt, erhältst du eine weitere Benachrichtigung.
-* **Trotzdem Kaffee zubereiten:** Auch wenn der Tankzähler anzeigt, dass der Tank leer ist, kannst du weiterhin einen Kaffee zubereiten. Beachte jedoch, dass deine Tasse möglicherweise nicht ganz voll wird, wenn tatsächlich zu wenig Wasser im Tank ist.
+Diese Automation reagiert auf mehrere Auslöser, um den Wassertank intelligent zu verwalten:
+
+* **Tank entnommen & wieder eingesetzt (`tank_entnommen`):**
+    * Wird der Wassertank für mindestens 10 Sekunden entnommen und dann wieder eingesetzt, wartet die Automation kurz, ob der Tank wieder eingesetzt wird.
+    * Anschließend wird der `kaffeemaschine_wasser_nachfuell_prompt` Timer abgebrochen, und der Kaffeezubereitungszähler (`counter.kaffeemaschine_zubereitungen`) wird auf Null zurückgesetzt. Im Dashboard wird dann wieder 100 % Füllstand angezeigt.
+* **Zähler über Maximum (`zaehler_ueber_max`):**
+    * Wenn der Kaffeezubereitungszähler einen vordefinierten Schwellenwert (standardmäßig **5 Tassen**) überschreitet, wird der Hilfs-Boolean `kaffeemaschine_5min_timer_abbrechen` auf `on` gesetzt.
+    * Gleichzeitig wird der `kaffeemaschine_wasser_nachfuell_prompt` Timer gestartet, der standardmäßig auf 5 Minuten eingestellt ist.
+    * Der Boolean `sprachbenachrichtigung_ausloeser_wassertank` wird für 5 Sekunden auf `on` gesetzt, um dich auf den wahrscheinlich leeren Wassertank hinzuweisen. Du hast nun 5 Minuten Zeit, den Wassertank zu befüllen.
+* **Zähler unter 1 (`zaehler_unter_1`):**
+    * Wenn der Zähler auf 0 zurückgesetzt wird (z.B. nach dem Nachfüllen), wird der `kaffeemaschine_wasser_nachfuell_prompt` Timer abgebrochen.
+* **Verbrauch erkannt (`verbrauch_erkannt`) & 5-Minuten-Timer aktiv:**
+    * Wenn ein Stromverbrauch von über 50 W für 5 Sekunden erkannt wird, während der `kaffeemaschine_5min_timer_abbrechen` aktiv ist (weil der Tank eigentlich leer sein sollte), dann:
+        * Wird die Kaffeemaschine kurz aus- und sofort wieder eingeschaltet. Dies dient als weitere, indirekte Erinnerung an den leeren Wassertank, ohne einen Spülvorgang auszulösen.
+        * Der Timer `kaffeemaschine_standby_vorwarnung` wird beendet.
+* **Maschine ausgeschaltet (`maschine_aus`):**
+    * Wenn die Kaffeemaschine ausgeschaltet wird, während der `kaffeemaschine_5min_timer_abbrechen` aktiv ist, wird dieser Helfer ausgeschaltet.
+* **Helfer `kaffeemaschine_5min_timer_abbrechen` geht von `on` auf `off` (`helfer_aus`):**
+    * Dieser Trigger sorgt dafür, dass, wenn der Helfer nach 5 Minuten automatisch auf `off` geht, die Maschine ausgeschaltet und wieder eingeschaltet wird. Der `kaffeemaschine_standby_vorwarnung` Timer wird beendet. Dies ist der Fall, wenn der Wassertank nicht innerhalb der 5 Minuten nachgefüllt wurde.
 
 ### Ziel
 
 Ein realistisches Tracking des Wasserverbrauchs und eine intelligente Erinnerungsfunktion, die ein manuelles Zählerzurücksetzen überflüssig macht. Hierfür ist lediglich ein **Sensorkontakt am Wassertank** notwendig.
-
----
 
 ## ⏱️ 5. Timer-gesteuerte Abschaltung
 
