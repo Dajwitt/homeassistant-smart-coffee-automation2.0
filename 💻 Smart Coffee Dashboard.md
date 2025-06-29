@@ -301,3 +301,5 @@ Nach dem Speichern kannst du das Dashboard sofort nutzen. Alle relevanten Karten
 - Timer-Steuerung
 
 ---
+
+**Weiter geht's mit ✏ [Anpassung im laufenden Betrieb](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-6-anpassung-im-laufenden-betrieb)**
