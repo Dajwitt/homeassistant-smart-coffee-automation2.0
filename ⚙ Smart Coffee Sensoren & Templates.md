@@ -1,23 +1,25 @@
 ## Anleitung: Sensoren & Templates korrekt einfügen
 
-Damit alle Automationen, Blueprints und das Dashboard reibungslos funktionieren, **müssen die folgenden Sensoren und Templates exakt wie beschrieben in die configuration.yaml eingefügt werden**.
+Diese Datei enthält alle notwendigen Sensoren und Templates, die für das reibungslose Funktionieren deiner **Home Assistant Smart Coffee Automation** benötigt werden. Es ist entscheidend, dass diese Komponenten **exakt wie beschrieben** in deine `configuration.yaml` Datei eingefügt werden, um die Kompatibilität mit allen Automationen, Blueprints und dem Dashboard sicherzustellen.
 
 ---
 
-## ⚠️ Wichtige Hinweise
+## ⚠️ Wichtige Hinweise zur Konfiguration
 
-- Verwende ausschließlich **Leerzeichen**, keine Tabs!
-- Die Einrückung muss exakt stimmen (2 Leerzeichen pro Ebene).
-- `template:` und `sensor:` dürfen **nur je einmal** in der Datei vorkommen. Wenn bereits vorhanden, **einfach erweitern**.
+Bitte beachte die folgenden essenziellen Punkte, um Fehler bei der Integration zu vermeiden:  
+  
+- Verwende ausschließlich **Leerzeichen** für die Einrückung, keine Tabulatoren.  
+- Die Einrückung muss präzise sein (genau 2 Leerzeichen pro Hierarchieebene).  
+- Die Schlüssel `template:` und `sensor:` dürfen in deiner `configuration.yaml` Datei **jeweils nur einmal** vorkommen. Sollten sie bereits existieren, erweitere die vorhandenen Abschnitte einfach um die hier gezeigten Einträge.
 
 ---
 
-## 🧩 Schritt 1: Template-Sensoren einfügen
-
-Füge folgenden Abschnitt in den Bereich `template:` deiner `configuration.yaml` ein:
- 
- 💡 **Hinweis:** Der Füllstand des Wassertanks wird **automatisch berechnet** – für Prozent und verbleibende Tassen.
-Du musst in beiden Sensoren nur **eine einzige Zeile** anpassen:
+## 🧩 Schritt 1: Template-Sensoren einfügen  
+  
+Füge den folgenden Code-Abschnitt in den `template:`-Bereich deiner `configuration.yaml` ein:  
+  
+💡 **Hinweis zur Anpassung des Wassertanksensors:** 
+Der Füllstand des Wassertanks wird automatisch in Prozent und verbleibenden Tassen berechnet. Du musst in beiden Sensoren lediglich **eine einzige Zeile** anpassen, um die maximale Kapazität deiner Maschine zu hinterlegen:
 
 ```jinja2
 {% set max_tassen = 5 %}
@@ -52,7 +54,7 @@ template:
 
 ## 📊 Schritt 2: Statistik-Sensoren einfügen
 
-Füge diesen Abschnitt in den Bereich sensor: deiner configuration.yaml ein:
+Füge diesen Abschnitt in den `sensor:`-Bereich deiner `configuration.yaml` ein:
 
 ```yaml
 sensor:
@@ -79,19 +81,19 @@ sensor:
     end: "{{ now() }}"
 ```
 
-💡 Tipp: Wenn du schon andere **sensor:-Einträge** hast, **ergänze** diese einfach – du brauchst den Abschnitt sensor: **nur einmal** in der Datei.
+💡 **Wichtiger Tipp:** Falls du bereits andere `sensor:`-Einträge in deiner `configuration.yaml` hast, **ergänze** diese einfach um die oben genannten Sensoren. Den `sensor:`-Abschnitt benötigst du in der gesamten Datei **nur einmal**.
 
 ---
 
-### 💪 Warum ist das so wichtig?
+## 💪 Warum ist diese exakte Übernahme so wichtig?
 
-Diese Sensoren und Templates …
+Diese speziellen Sensoren und Templates sind elementar für die Funktionalität deines Smart Coffee Systems, da sie:
 
-- ❌ dürfen **nicht** verändert oder gekürzt werden
-- ✅ sind exakt auf die Automationen abgestimmt
-- ⚖️ sind die Grundlage für Statistiken und das Dashboard
+- **nicht** verändert oder gekürzt werden dürfen, um die korrekte Funktion zu gewährleisten.
+- **exakt** auf alle projektinternen Automationen abgestimmt sind.
+- die unverzichtbare Grundlage für alle Statistiken und das gesamte Dashboard bilden.
 
-Nur wenn diese exakt so übernommen werden, funktioniert dein gesamtes System wie geplant.
+Dein gesamtes System wird nur dann wie geplant funktionieren, wenn diese Konfigurationen **exakt so übernommen** werden.
 
 ---
 
