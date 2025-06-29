@@ -55,3 +55,7 @@ Jede Kaffeemaschine hat leicht unterschiedliche Zubereitungszeiten für normale 
 ### 📈 Feinjustierung
 
 Beobachte das System nach den Anpassungen über einige Tage. Sollten weiterhin Zählfehler auftreten (z.B. eine große Tasse wird als normale Tasse gezählt), passe die Werte in den **Variablen-Abschnitten** der Automationen schrittweise an, bis die Erkennung optimal ist.
+
+---
+
+**Mache weiter mit ❓ [Warum dieses Projekt](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/%E2%9D%94%20Warum%20diese%20Projekt.md#%EF%B8%8F-ein-smarter-kaffeevollautomat-mit-home-assistant-die-version-20)**
