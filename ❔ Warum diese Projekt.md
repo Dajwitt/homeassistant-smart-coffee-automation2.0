@@ -1,9 +1,5 @@
 ## Ein smarter Kaffeevollautomat mit Home Assistant ☕️🤖
 
-Willkommen zu einem etwas anderen Smart-Home-Projekt – hier geht es nicht um Lichtschalter oder Bewegungsmelder, sondern um das wichtigste Gerät in der Küche: den Kaffeevollautomaten.
-
-Diese Anleitung zeigt dir, wie du mit einem Stromsensor, einem Türkontakt, ein paar Home Assistant-Helfern und cleverer Logik erkennen kannst, ob deine Kaffeemaschine gerade spült, Kaffee zubereitet – oder einfach nur still in der Ecke steht. Ganz ohne Integration oder API. Nur durch Verhaltenserkennung.
-
 ## Ziel des Projekts ist:
 
 - 🌀 Spülvorgänge zu erkennen (z. B. beim Einschalten)
@@ -11,13 +7,6 @@ Diese Anleitung zeigt dir, wie du mit einem Stromsensor, einem Türkontakt, ein 
 - 💧 Den Wassertank zu überwachen (indirekt, über die Anzahl der Zubereitungen)
 - ⏲️ Die Maschine gezielt auszuschalten, bevor sie automatisch spült
 - 🗣️ Die Daten für weitere Automationen (Benachrichtigungen, Statistiken, Sprachassistenten) verfügbar zu machen
-
-### ✅ Vorteile
-
-- Funktioniert mit nahezu jedem Vollautomaten, da das Verhalten analysiert wird, nicht die Technik
-- Sehr zuverlässig, wenn Stromaufnahme und Zubereitungsdauer konstant sind
-- Extrem vielseitig für Folge-Automationen (z. B. Wassertankwarnung, Abschaltung, Erinnerungen)
-- Kein Root, keine Cloud, keine Bastellösung auf der Maschine selbst nötig
 
 ### 🚫 Kein vollautomatischer Barista
 
