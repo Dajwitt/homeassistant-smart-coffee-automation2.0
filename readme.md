@@ -1,6 +1,19 @@
-# ☕ Home Assistant Smart Coffee Automation 2.0
+# ☕ Home Assistant Smart Coffee Automation 
 
-Willkommen zur Version 2.0 des Smart-Coffee-Projekts für Home Assistant. Dieses Projekt bietet eine vollständig automatisierte Auswertung, Steuerung und Optimierung deiner Kaffeemaschine – mit Fokus auf einfache Übernahme durch fertige Blueprints, Helfer, Sensoren und einem Dashboard.
+Willkommen zu einem etwas anderen Smart-Home-Projekt – hier geht es nicht um Lichtschalter oder Bewegungsmelder, sondern um das wichtigste Gerät in der Küche: **Den Kaffeevollautomaten**
+
+Diese Anleitung zeigt dir, wie du mit einem Stromsensor, einem Türkontakt, ein paar Home Assistant-Helfern und cleverer Logik erkennen kannst, ob dein **nicht smarter Kaffeevollautomat gerade spült, Kaffee zubereitet – oder einfach nur still in der Ecke steht. Ganz ohne Integration oder API. Nur durch Verhaltenserkennung.
+
+### ✅ Vorteile
+
+- Funktioniert mit nahezu jedem Vollautomaten, da das Verhalten analysiert wird, nicht die Technik
+- Sehr zuverlässig, wenn Stromaufnahme und Zubereitungsdauer konstant sind
+- Extrem vielseitig für Folge-Automationen (z. B. Wassertankwarnung, Abschaltung, Erinnerungen)
+- Kein Root, keine Cloud, keine Bastellösung auf der Maschine selbst nötig
+
+ ## 💡 Hinweis zur Übertragbarkeit
+
+Dieses Projekt basiert auf einem **DeLonghi Magnifica S Kaffeevollautomaten**. Doch das Prinzip lässt sich auf nahezu **jeden Vollautomaten übertragen**
 
 ---
 
