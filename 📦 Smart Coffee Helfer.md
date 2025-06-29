@@ -18,7 +18,11 @@ Bevor du die Timer konfigurierst, finde zunächst heraus, wann sich deine Kaffee
 
 Die beiden Helfer **Sprachbenachrichtigung auslösen Wassertank** und **Sprachbenachrichtigung auslösen Vorwarnung** dienen als Auslöser für Benachrichtigungen und sind bereits in die Automationen eingebunden. Du kannst damit **selbst entscheiden**, wie und auf welchem Weg du benachrichtigt werden möchtest – zum Beispiel per App, Sprachausgabe oder Nachricht.
 
-Damit dir die Benachrichtigungen tatsächlich zugestellt werden, musst du **zusätzlich eine eigene Automation erstellen**. Eine Anleitung dazu findest du hier:
+Damit dir die Benachrichtigungen tatsächlich zugestellt werden, musst du **zusätzlich eine eigene Automation erstellen**. 
+
+---
+
+**Eine Anleitung dazu findest du hier:**
 [Link folgt]
 
 ---
