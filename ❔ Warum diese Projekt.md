@@ -9,10 +9,15 @@ Dieses Dokument erklärt die Entstehungsgeschichte und die Kernziele des **Smart
 Die **Smart Coffee Automation 2.0** wurde mit klaren Zielen entwickelt, um dein Kaffeeerlebnis zu optimieren und mehr Transparenz in den Betrieb deines Vollautomaten zu bringen:
 
 * **Null-Smart-Maschine smart machen:** Das Kernziel dieses Projekts ist es, einen standardmäßigen, **nicht-smarten Kaffeevollautomaten** – wie beispielsweise einen **DeLonghi Magnifica S** – mittels externer Sensoren (Stromsensor und Türkontakt) vollwertig in Home Assistant zu integrieren. Dies ermöglicht es, alle Funktionen der Maschine zu erweitern und ihren Status sichtbar zu machen, was weit über einfache Komfortfunktionen hinausgeht.
+
 * **🌀 Spülvorgänge erkennen:** Automatische Spülvorgänge (z.B. beim Einschalten) sollen zuverlässig identifiziert werden, um unnötigen Wasserverbrauch zu vermeiden.
+
 * **☕ Kaffeezubereitung identifizieren & zählen:** Erkenne präzise, wann Kaffee gebrüht wird, und führe eine genaue Zählung durch.
+
 * **💧 Wassertank überwachen:** Obwohl viele Maschinen keinen direkten Sensor haben, wird der Wasserstand indirekt über die Anzahl der Zubereitungen überwacht.
+
 * **⏲️ Gezielte Abschaltung:** Die Maschine soll gezielt ausgeschaltet werden können, bevor sie automatisch spült und in den Standby-Modus geht.
+
 * **🗣️ Daten für weitere Automationen:** Alle gesammelten Daten und Statusinformationen werden für weiterführende Automationen wie Benachrichtigungen, Statistiken und die Integration in Sprachassistenten nutzbar gemacht.
 
 ### 🚫 Wichtiger Hinweis: Kein vollautomatischer Barista
