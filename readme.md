@@ -7,16 +7,16 @@ Willkommen zur Version 2.0 des Smart-Coffee-Projekts für Home Assistant. Dieses
 ## 📚 Funktionsübersicht
 
  ✅ Automatische Erkennung von Kaffeezubereitungen  
+
+ ✅ Wassertanküberwachung  
  
  ✅ Differenzierung zwischen 1 und 2 Tassen  
  
  ✅ Zählung aller Vorgänge (inkl. täglicher & wöchentlicher Statistik)  
  
- ✅ Spülvorgänge ignorieren (Optional)
- 
  ✅ Automatische Abschaltung der Maschine mit oder ohne spülen vor dem Standby  
- 
- ✅ Integration eines (Wasserstand-Sensors) mit Reset-Zähler  
+
+ ✅ Benachrichtigung - wenn der Tank leer ist oder die Maschine bald abschaltet  
  
  ✅ Kompaktes Dashboard für Übersicht und Kontrolle
 
@@ -29,11 +29,6 @@ Damit alle Automationen und Auswertungen korrekt funktionieren, benötigst du fo
 ✅ **Smart-Relaisschalter** (z. B. Shelly 1PM Gen 2/3/4) zur Leistungsmessung
 
 ✅ **Kontaktsensor** (z. B. Aqara Tür-/Fensterkontakt) am Wassertank
-
-✅ **Erfasste Daten:**
-– Zeit bis zum Standby
-– Dauer der Zubereitung
-– Leistungsaufnahme (Watt) beim Einschalten und während der Zubereitung
 
 ## **Optional**
 
