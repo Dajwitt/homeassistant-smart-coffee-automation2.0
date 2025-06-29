@@ -119,9 +119,10 @@ Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine.
 
 📑 Details zu Dashboard findest du hier: [💻 Smart Coffee Dashboard.md](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%92%BB%20Smart%20Coffee%20Dashboard.md)
 
-📷 Beispiel:
+📷 Smart Coffee Dashboard 📷
 
-<img src="https://github.com/user-attachments/assets/7fc665fa-e27d-436f-8962-43ecba983ed7" width="600"/>
+
+<img src="https://github.com/Dajwitt/dajwitt_workplace2/blob/main/Screenshot%202025-06-29%2020.51.34.png" width="400"/>
 
 ---
 
