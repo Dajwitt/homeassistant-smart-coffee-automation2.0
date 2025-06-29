@@ -148,4 +148,4 @@ Eine effiziente und automatische Abschaltung der Maschine **ohne unnötiges Spü
 
 ---
 
-**Mache weiter mit [💻 Dashboard importieren](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-5-dashboard-importieren)**
+**Mache weiter mit 💻 [Dashboard importieren](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-5-dashboard-importieren)**
