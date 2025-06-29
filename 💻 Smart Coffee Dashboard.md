@@ -101,7 +101,7 @@ views:
       - type: grid
         cards:
           - type: heading
-            icon: mdi:coffee-maker-outline
+            icon: mdi:water-outline
             heading: Wasser
             heading_style: title
           - type: custom:button-card
@@ -124,12 +124,9 @@ views:
                 - grid-template-rows: auto 1fr auto
                 - background: |
                     [[[
-                      let v = parseInt(entity.state);
-                      if (v >= 85) return "linear-gradient(to top, #2e7d32, #66bb6a)";
-                      if (v >= 60) return "linear-gradient(to top, #fbc02d, #fff176)";
-                      if (v >= 35) return "linear-gradient(to top, #f57c00, #ffb74d)";
-                      if (v >= 17) return "linear-gradient(to top, #c62828, #ef5350)";
-                      return "linear-gradient(to top, #880000, #b71c1c)";
+                      let p = Math.min(100, Math.max(0, parseInt(entity.state)));
+                      let hue = (p / 100) * 120;
+                      return `linear-gradient(to top, hsl(${hue}, 90%, 40%), hsl(${hue}, 90%, 60%))`;
                     ]]]
               icon:
                 - height: 60px
@@ -138,7 +135,7 @@ views:
                 - justify-self: center
                 - animation: |
                     [[[
-                      return parseInt(entity.state) < 18 ? "blink-slow 1.5s infinite" : "none";
+                      return parseInt(entity.state) < 20 ? "blink-slow 1.5s infinite" : "none";
                     ]]]
               state:
                 - font-size: 1.4em
@@ -147,7 +144,7 @@ views:
                 - justify-self: center
                 - animation: |
                     [[[
-                      return parseInt(entity.state) < 18 ? "blink-slow 1.5s infinite" : "none";
+                      return parseInt(entity.state) < 20 ? "blink-slow 1.5s infinite" : "none";
                     ]]]
             extra_styles: |
               @keyframes blink-slow {
@@ -166,7 +163,7 @@ views:
       - type: grid
         cards:
           - type: heading
-            icon: mdi:coffee-maker-outline
+            icon: mdi:chart-bar-stacked
             heading: Statistik
             heading_style: title
           - type: tile
@@ -207,7 +204,7 @@ views:
       - type: grid
         cards:
           - type: heading
-            icon: mdi:tools
+            icon: mdi:timer-outline
             heading: Timer
             heading_style: title
           - type: tile
@@ -234,7 +231,7 @@ views:
       - type: grid
         cards:
           - type: heading
-            icon: ''
+            icon: mdi:tools
             heading: Helfer
             heading_style: title
           - features:
@@ -254,7 +251,32 @@ views:
             vertical: false
             hide_state: true
       - type: grid
-        cards: []
+        cards:
+          - type: heading
+            icon: mdi:message-alert-outline
+            heading: Nachrichten
+            heading_style: title
+          - type: tile
+            entity: input_boolean.sprachbenachrichtigung_ausloeser_vorwarnung
+            features_position: bottom
+            vertical: false
+            grid_options:
+              columns: 12
+              rows: 1
+            hide_state: false
+            color: accent
+            state_content: last_changed
+            name: Vorwarnung Abschalten
+          - type: tile
+            entity: input_boolean.sprachbenachrichtigung_ausloeser_wassertank
+            features_position: bottom
+            vertical: false
+            grid_options:
+              columns: 12
+              rows: 1
+            state_content: last_changed
+            color: accent
+            name: Warnung Wasser Leer
     cards: []
     badges: []
     header:
@@ -262,6 +284,7 @@ views:
         type: markdown
         text_only: true
         content: '# Kaffeemaschine  ✨'
+
 ```
 
 ---
