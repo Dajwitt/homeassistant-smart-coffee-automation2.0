@@ -46,13 +46,13 @@ Bevor du startest, solltest du folgende Informationen über deine Kaffeemaschine
 
 ⏱️ **Standby-Zeit:** Wie lange bleibt die Maschine nach dem Einschalten aktiv, bevor sie automatisch abschaltet?
 
-☕ **Zubereitungsdauer:** (Voreingestellt)
+☕ **Zubereitungsdauer:** (Voreingestellt und wird im laufenden Betrieb angepasst!)
 – Eine Tasse: unter 60 Sekunden 
 – Zwei Tassen: ab 60 Sekunden
 
-⚡ **Leistungsaufnahme (Watt):**
-– Beim Einschalten (voreingestellt: 500 W)
-– Während der Zubereitung (voreingestellt: 1000 W)
+⚡ **Leistungsaufnahme (Watt):** (Voreingestellt und wird im laufenden Betrieb angepasst!)
+– Beim Einschalten (500 W)
+– Während der Zubereitung (1000 W)
 
 ---
 
@@ -106,11 +106,15 @@ Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine.
 
 📑 Details zu Dashboard findest du hier: [💻 Smart Coffee Dashboard.md](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%92%BB%20Smart%20Coffee%20Dashboard.md)
 
-> 📌 Hinweis: YAML-Modus muss aktiv sein, um das Dashboard direkt per Datei einzufügen. Alternativ können die Karten manuell hinzugefügt werden.
-
 📷 Beispiel:
 
 <img src="https://github.com/user-attachments/assets/7fc665fa-e27d-436f-8962-43ecba983ed7" width="600"/>
+
+---
+
+## 💻 Schritt 6: Anpassung im laufenden Betrieb
+
+Hier erfolgt die Nacharbeit und erfordert das Beobachten der Abläufe und kleine Anpassungen. Eine Anleitung dazu findest du hier: [Link folgt]
 
 ---
 
