@@ -16,23 +16,6 @@ So smart die Erkennung auch ist – **die Maschine bleibt manuell**: Du musst we
 
 ---
 
-## 🔧 So baust du dein eigenes Smart-Kaffee-System
-
-Wenn du direkt loslegen willst, folge einfach dieser Schritt-für-Schritt-Anleitung:
-
-1. 🔍 [Benötigte Datenquellen und Messwerte](./Benötigte%20Datenquellen%20und%20Messwerte.md)
-2. 🧰 [Geräte & Sensor-Voraussetzungen](./Geräte.md)
-3. 🛠️ [Helfer (Helpers)](./Helfer.md)
-4. 🧪 [Template Sensoren](./Template%20Sensoren.md)
-5. ⚙️ Automationen:
-
-   * [Kaffeezubereitung erkennen](./Kaffeezubereitung%20erkennen.md)
-   * [Spülvorgang erkennen](./Delongi%20Spülen%20erkennen.md)
-   * [Timer & Abschaltung](./Timer%20%26%20Abschaltung.md)
-   * [Wassertank – Zähler zurücksetzen](./Wassertank%20–%20Zähler%20zurücksetzen.md)
-
----
-
 ## 💡 Warum ich diese Automationen gebaut habe
 
 ### 1. **Spülen verhindern vorm Ausschalten**
@@ -55,13 +38,6 @@ Da mein Automat den Wasserstand nicht misst, zählt Home Assistant einfach mit:
 
 Die Automationen erfassen auch, **wie lange die Maschine bereits an ist**, wann sie sich **abschaltet**. Wird in der Zeit ein neuer Kaffee zubereitet, startet alle Timer neu. So kannst du z. B. anzeigen lassen:  
  *„Läuft seit 37 Minuten“*, *„geht in Kürze in den Standby“*, *„wurde nach letzter Zubereitung automatisch abgeschaltet“*.
-
----
-
-## 💡 Hinweis zur Übertragbarkeit
-
-Dieses Projekt basiert auf einem **DeLonghi Magnifica S Kaffeevollautomaten**. Doch das Prinzip lässt sich auf nahezu **jeden Vollautomaten übertragen** – wichtig ist nur, dass du das typische Verhalten deines Geräts **kennst und dokumentierst**.  
-Dann kannst du die **Sensoren, Schwellenwerte und Zeitintervalle** einfach anpassen.
 
 ---
 
