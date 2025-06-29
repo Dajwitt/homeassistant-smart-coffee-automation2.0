@@ -102,7 +102,7 @@ Alle Automationen sind als **Blueprints** verfügbar.
 
 | Automation                   | Blueprint-Import                                                                                                                                                                                                   |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ☕ Kaffeezubereitung erkennen | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F742f2a1b079aafa4c80e378e42038555%2Fraw%2Fkaffeezubereitung_erkennen.yaml) |
+| ☕ Kaffeezubereitung erkennen | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F9e9aa8203902c0265c80f30f64cc5911) |
 | 🍵 Tassengröße erkennen      | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F9e9aa8203902c0265c80f30f64cc5911%2Fraw%2Ftassengroesse_bestimmen.yaml)    |
 | 🌀 Spülvorgang erkennen      | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F7b47fb55c00832db02cb799baef7181f%2Fraw%2Fspuelvorgang_erkennen.yaml)      |
 | 💧 Wassertank zurücksetzen   | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F70d522b2e358cca27c41e225abe3b458%2Fraw%2Fwassertank_ueberwachen.yaml)     |
