@@ -16,7 +16,14 @@ Bevor du die Timer konfigurierst, finde zunächst heraus, wann sich deine Kaffee
 
 ---
 
-> ⚠️  Die drei Timer (`standby_vorwarnung`, `idle_shutdown`, `debug_timer`) **müssen in der** `configuration.yaml` **gepflegt werden**, da diese Timer nach der Erstellung **nicht über die UI bearbeitet** werden können. Passe **duration:** der Timer nach deinen Bedürfnissen an.
+Die beiden Helfer **Sprachbenachrichtigung auslösen Wassertank** und **Sprachbenachrichtigung auslösen Vorwarnung** dienen als Auslöser für Benachrichtigungen und sind bereits in die Automationen eingebunden. Du kannst damit **selbst entscheiden**, wie und auf welchem Weg du benachrichtigt werden möchtest – zum Beispiel per App, Sprachausgabe oder Nachricht.
+
+Damit dir die Benachrichtigungen tatsächlich zugestellt werden, musst du **zusätzlich eine eigene Automation erstellen**. Eine Anleitung dazu findest du hier:
+[Link folgt]
+
+---
+
+> ⚠️  Die drei Timer (`standby_vorwarnung`, `idle_shutdown`, `debug_timer`) **müssen in der** `configuration.yaml` **gepflegt werden**, da diese Timer nach der Erstellung **nicht über die UI bearbeitet** werden können. Passe **duration:** der Timer nach deinen Bedürfnissen an. Es wird empfohlen die Timer später über die die UI anzulegen, da diese beim Neustart von Home Assistant nicht abbrechen und weiter laufen!
 
 ### 🧾 Anleitung zur Integration der Helfer:
 
@@ -38,6 +45,14 @@ input_boolean:
   kaffeemaschine_5min_timer_abbrechen:
     name: 5-Minuten-Timer abbrechen
     icon: mdi:timer-off
+
+  sprachbenachrichtigung_ausloeser_wassertank:
+    name: Sprachbenachrichtigung auslösen Wassertank
+    icon: mdi:message-bulleted
+    
+  sprachbenachrichtigung_ausloeser_vorwarnung:
+    name: Sprachbenachrichtigung auslösen Vorwarnung
+    icon: mdi:message-bulleted
 
 input_number:
 
