@@ -42,19 +42,19 @@ Eine korrekte Erkennung des Spülvorgangs ist essenziell, um die Genauigkeit dei
 
 ### Funktion
 
-Diese Automation zählt jede tatsächliche Kaffeezubereitung basierend auf dem Stromverbrauch deiner Maschine. Sie bereitet zudem die Daten vor, um später zwischen einer oder zwei Tassen zu unterscheiden.
+Diese Automation zählt jede tatsächliche Kaffeezubereitung basierend auf dem Stromverbrauch deiner Maschine. Sie erfasst präzise die Brühdauer, um später zwischen einer oder zwei Tassen unterscheiden zu können.
 
 ### Ablauf
 
 * **Auslöser:** Die Automation wird ausgelöst, sobald die **Leistungsaufnahme über 1000 W** steigt.
-* **Bedingung:** Der Boolean `spuelvorgang_aktiv` muss für mindestens **5 Sekunden `off`** sein. Dies ist eine wichtige Sicherheitsabfrage, um sicherzustellen, dass kein Spülvorgang fälschlicherweise als Zubereitung gezählt wird.
-* **Zählung der Brühdauer:** Innerhalb einer Schleife wird **jede Sekunde die Dauer der Kaffeezubereitung** erfasst.
+* **Bedingung:** Der Boolean `spuelvorgang_aktiv` muss für mindestens **5 Sekunden `off`** sein. Dies ist eine wichtige Sicherheitsabfrage, um sicherzustellen, dass der Stromanstieg nicht von einem Spülvorgang herrührt und fälschlicherweise als Zubereitung gezählt wird.
+* **Zählung der Brühdauer:** Innerhalb einer Schleife wird **jede Sekunde die Dauer der Kaffeezubereitung erfasst, solange der Stromverbrauch über 1000 W bleibt und kein Spülvorgang aktiv ist**. Dies ist entscheidend, da es bei der Kaffeezubereitung zu Schwankungen im Stromverbrauch kommen kann. Durch die kontinuierliche Messung über 1000 W wird eine bessere und zuverlässigere Dauer der tatsächlichen Zubereitung erkannt.
 * **Speicherung:** Nach Abschluss des Brühvorgangs wird diese gemessene Dauer im Helfer `kaffeemaschine_letzte_bruehdauer` gespeichert.
-* **Zweite Sicherheitsabfrage:** Es erfolgt eine erneute Prüfung, ob `spuelvorgang_aktiv` **nicht aktiv** ist. Nur wenn diese Bedingung erfüllt ist, erfolgt die weitere Auswertung:
+* **Zweite Sicherheitsabfrage & Auswertung:** Es erfolgt eine erneute Prüfung, ob `spuelvorgang_aktiv` **nicht aktiv** ist. Nur wenn diese Bedingung erfüllt ist, erfolgt die weitere Auswertung:
     * **15–59 Sekunden Brühdauer:** Wird als 1 Tasse gewertet.
-    * **60–90 Sekunden Brühdauer:** Wird als 2 Tassen gewertet.
+    * **60–120 Sekunden Brühdauer:** Wird als 2 Tassen gewertet.
 * **Statistik-Update:** Der Gesamt-Zubereitungszähler wird erhöht, und der Boolean `zubereitung_erkannt_statistik` wird auf `on` gesetzt, um die aktuelle Zubereitung im Dashboard für Statistiken anzuzeigen.
-* **Zwischenspeicher-Reset:** Nach 10 Sekunden werden alle temporären Zwischenspeicher zurückgesetzt.
+* **Zwischenspeicher-Reset:** Nach 10 Sekunden werden alle temporären Zwischenspeicher zurückgesetzt (z.B. `kaffeemaschine_bruehleistung_dauer` und `zubereitung_erkannt_statistik` werden auf 0 bzw. off gesetzt).
 
 ### Besonderheit
 
