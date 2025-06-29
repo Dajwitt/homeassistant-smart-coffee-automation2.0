@@ -126,7 +126,7 @@ Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine.
 
 ---
 
-## 💻 Schritt 6: Anpassung im laufenden Betrieb
+## ✏ Schritt 6: Anpassung im laufenden Betrieb
 
 Hier erfolgt die Nacharbeit und erfordert das Beobachten der Abläufe und kleine Anpassungen. 📑 Details zu Dashboard findest du hier:  [📈 Smart Coffee Anpassung & Feinjustierung](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%93%88%20Smart%20Coffee%20Anpassung%20%26%20Feinjustierung.md)
 
