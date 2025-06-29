@@ -60,3 +60,7 @@ Wenn du:
 * deinem Home Assistant ein echtes Highlight hinzufügen willst,
 
 ... dann ist dieses Projekt genau das Richtige für dich!
+
+---
+
+> Erstellt von [Dajwitt](https://github.com/Dajwitt) · Projektseite: [homeassistant-smart-coffee-automation2.0](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0)
