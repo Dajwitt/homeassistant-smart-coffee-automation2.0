@@ -58,4 +58,4 @@ Beobachte das System nach den Anpassungen über einige Tage. Sollten weiterhin Z
 
 ---
 
-**Mache weiter mit ❓ [Warum dieses Projekt](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/%E2%9D%94%20Warum%20diese%20Projekt.md#%EF%B8%8F-ein-smarter-kaffeevollautomat-mit-home-assistant-die-version-20)**
+**Mache weiter mit ❓ [Warum dieses Projekt](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%E2%9D%94%20Warum%20dieses%20Projekt.md)**
