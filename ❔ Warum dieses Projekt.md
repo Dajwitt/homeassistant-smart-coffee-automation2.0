@@ -63,4 +63,4 @@ Wenn du:
 
 ---
 
-> Erstellt von [Dajwitt](https://github.com/Dajwitt) · Projektseite: [homeassistant-smart-coffee-automation2.0](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0)
+ **Ergebnis 🧪 [Was du bekommst](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-ergebnis-was-du-bekommst)**
