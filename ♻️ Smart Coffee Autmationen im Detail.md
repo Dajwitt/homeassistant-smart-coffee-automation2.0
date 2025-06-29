@@ -145,3 +145,7 @@ Eine effiziente und automatische Abschaltung der Maschine **ohne unnötiges Spü
 * Das reibungslose Zusammenspiel aller Funktionen ist nur gewährleistet, wenn **alle Helfer, Sensoren und Automationen exakt wie beschrieben übernommen werden**.
 
 **Bitte folge exakt dieser Anleitung, damit alle Verknüpfungen zwischen den Automationen korrekt greifen und dein Smart Coffee System zuverlässig funktioniert.**
+
+---
+
+**Mache weiter mit [💻 Dashboard importieren](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-5-dashboard-importieren)**
