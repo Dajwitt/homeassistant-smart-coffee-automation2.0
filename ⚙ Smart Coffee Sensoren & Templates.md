@@ -33,21 +33,13 @@ template:
       - name: "Kaffeetank Füllstand Prozent"
         unique_id: kaffeetank_fuellstand_prozent
         unit_of_measurement: "%"
+        device_class: battery
+        icon: mdi:eye
         state: >
-          {% set max_tassen = 5 %} # Die 5 ersetzen
+          {% set max_tassen = 5 %}
           {% set counter = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
           {% set prozent = 100 - ((counter / max_tassen) * 100) %}
           {{ [prozent, 0] | max | round(0) }}
-
-      - name: "Kaffeetank Füllstand Tassen"
-        unique_id: kaffeetank_fuellstand_tassen
-        unit_of_measurement: "Tassen"
-        icon: mdi:coffee-outline
-        state: >
-          {% set max_tassen = 5 %} # Die 5 ersetzen 
-          {% set counter = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
-          {% set remaining = max_tassen - counter %}
-          {{ [remaining, 0] | max }}
 
 ```
 ---
