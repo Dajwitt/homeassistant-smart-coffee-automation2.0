@@ -299,3 +299,5 @@ Nach dem Speichern kannst du das Dashboard sofort nutzen. Alle relevanten Karten
 - Wassertankanzeige
 - Statistiken
 - Timer-Steuerung
+
+---
