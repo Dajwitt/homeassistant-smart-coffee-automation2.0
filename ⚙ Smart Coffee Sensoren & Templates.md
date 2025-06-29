@@ -91,4 +91,4 @@ Dein gesamtes System wird nur dann wie geplant funktionieren, wenn diese Konfigu
 
 ---
 
-**Weiter geht's mit Schritt 4 [♻️ Automationen per Blueprint importieren](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-4-automationen-per-blueprint-importieren)**
+**Weiter geht's mit ♻️ [Automationen per Blueprint importieren](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-4-automationen-per-blueprint-importieren)**
