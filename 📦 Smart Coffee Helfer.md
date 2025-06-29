@@ -100,5 +100,5 @@ timer:
     icon: mdi:water-alert
 
 ```
-"Bereit für den nächsten Schritt?" [So legst du die Sensoren & Templates an](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-3-sensoren--templates-einf%C3%BCgen)
+"Bereit für den nächsten Schritt?" [⚙ Schritt 3: Sensoren & Templates einfügen](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/%E2%9A%99%20Smart%20Coffee%20Sensoren%20%26%20Templates.md#anleitung-sensoren--templates-korrekt-einf%C3%BCgen)
 
