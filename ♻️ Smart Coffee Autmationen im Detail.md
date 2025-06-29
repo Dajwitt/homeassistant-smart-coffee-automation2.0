@@ -83,13 +83,20 @@ Diese Automation analysiert die von der vorherigen Automation (`Zubereitung erke
 
 ### Funktion
 
-Diese Automation überwacht den Kaffeezubereitungs-Zähler und leitet daraus den Füllstand des Wassertanks ab. Sobald der Zähler einen vordefinierten Schwellenwert (z.B. 5 Tassen) überschreitet, wird ein 5-Minuten-Timer gestartet und ein Benachrichtigungs-Trigger aktiviert, um dich auf den leeren Wassertank hinzuweisen. Du hast 5 Minuten Zeit, den Wassertank aufzufüllen. Beim Wiedereinsetzen des Wassertanks wird der Zubereitungszähler auf Null zurückgesetzt, und das Dashboard zeigt wieder 100 % Füllstand an.
+Diese Automation überwacht den Kaffeezubereitungs-Zähler und leitet daraus den Füllstand des Wassertanks ab. Sie ist darauf ausgelegt, dich proaktiv an das Nachfüllen zu erinnern und die Zählung nach dem Befüllen automatisch zurückzusetzen.
 
-Wird der Wassertank nicht innerhalb der 5 Minuten aufgefüllt, schaltet sich die Maschine aus. Dies dient als weitere, indirekte Erinnerung an den leeren Wassertank. Falls du die Maschine wieder einschaltest und der Zubereitungszähler immer noch über dem Schwellenwert ist, erhältst du erneut eine Benachrichtigung. Du kannst trotzdem einen Kaffee zubereiten, musst aber damit rechnen, dass die Tasse möglicherweise nicht ganz voll wird.
+### Ablauf
+
+* **Zählerüberwachung & Benachrichtigung:** Sobald der Kaffeezubereitungs-Zähler über einen vordefinierten Schwellenwert (z.B. 5 Tassen, anpassbar an deine Maschine) steigt, wird ein 5-Minuten-Timer (`kaffeemaschine_wasser_nachfuell_prompt`) gestartet. Gleichzeitig wird ein Trigger (`sprachbenachrichtigung_ausloeser_wassertank`) für Benachrichtigungen aktiviert, der signalisiert, dass der Wassertank wahrscheinlich leer ist.
+    * Du hast nun **5 Minuten Zeit**, den Wassertank zu befüllen.
+* **Wassertank befüllt:** Sobald du den Wassertank wieder einsetzt (erkannt durch den Türkontakt am Wassertank), wird der Zubereitungszähler (`counter.kaffeemaschine_zubereitungen`) auf Null zurückgesetzt. Im Dashboard wird dann wieder 100 % Füllstand angezeigt.
+* **Automatische Abschaltung bei Nicht-Befüllen:** Solltest du den Wassertank nicht innerhalb der 5 Minuten nachfüllen, schaltet sich die Kaffeemaschine automatisch aus. Dies dient als weitere, indirekte Erinnerung, dass der Wassertank leer ist.
+* **Erneute Benachrichtigung:** Wenn du die Maschine wieder einschaltest und der Zubereitungszähler immer noch über dem Schwellenwert liegt, erhältst du eine weitere Benachrichtigung.
+* **Trotzdem Kaffee zubereiten:** Auch wenn der Tankzähler anzeigt, dass der Tank leer ist, kannst du weiterhin einen Kaffee zubereiten. Beachte jedoch, dass deine Tasse möglicherweise nicht ganz voll wird, wenn tatsächlich zu wenig Wasser im Tank ist.
 
 ### Ziel
 
-Ein realistisches Tracking des Wasserverbrauchs ohne manuelles Zählerzurücksetzen. Hierfür ist lediglich ein **Sensorkontakt am Wassertank** notwendig.
+Ein realistisches Tracking des Wasserverbrauchs und eine intelligente Erinnerungsfunktion, die ein manuelles Zählerzurücksetzen überflüssig macht. Hierfür ist lediglich ein **Sensorkontakt am Wassertank** notwendig.
 
 ---
 
@@ -116,7 +123,7 @@ Ich habe mich bewusst dafür entschieden, das Spülen vor der automatischen Absc
 
 ### Ziel
 
-Eine effiziente und automatische Abschaltung der Maschine **ohne unnötiges Spülen**. Die Maschine kann auch nach dem Spülen und automatischen Ausschalten vom Strom getrennt werden.
+Eine effiziente und automatische Abschaltung der Maschine **ohne unnötiges Spülen**.
 
 ---
 
