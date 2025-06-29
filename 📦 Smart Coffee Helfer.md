@@ -42,10 +42,6 @@ input_boolean:
     name: Kaffeezubereitung erkannt statistik
     icon: mdi:coffee-maker-check-outline
 
-  kaffeemaschine_5min_timer_abbrechen:
-    name: 5-Minuten-Timer abbrechen
-    icon: mdi:timer-off
-
   sprachbenachrichtigung_ausloeser_wassertank:
     name: Sprachbenachrichtigung auslösen Wassertank
     icon: mdi:message-bulleted
