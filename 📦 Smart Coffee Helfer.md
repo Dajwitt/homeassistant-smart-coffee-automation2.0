@@ -100,5 +100,5 @@ timer:
     icon: mdi:water-alert
 
 ```
-[zurück zur anleitung](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-2-helfer-anlegen)
+"Bereit für den nächsten Schritt?" [So legst du deine Helfer an](https://github.com/Dajwitt/homeassistant-smart-coffee-automation3.0/blob/main/readme.md#-schritt-2-helfer-anlegen)
 
