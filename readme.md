@@ -102,11 +102,11 @@ Alle Automationen sind als **Blueprints** verfügbar.
 
 | Automation                   | Blueprint-Import                                                                                                                                                                                                   |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ☕ Kaffeezubereitung erkennen | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F9e9aa8203902c0265c80f30f64cc5911) |
+| ☕ Kaffeezubereitung erkennen | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F742f2a1b079aafa4c80e378e42038555) |
 | 🍵 Tassengröße erkennen      | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F9e9aa8203902c0265c80f30f64cc5911)    |
-| 🌀 Spülvorgang erkennen      | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F7b47fb55c00832db02cb799baef7181f%2Fraw%2Fspuelvorgang_erkennen.yaml)      |
-| 💧 Wassertank zurücksetzen   | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F70d522b2e358cca27c41e225abe3b458%2Fraw%2Fwassertank_ueberwachen.yaml)     |
-| ⏱ Timer & Abschaltung        | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.githubusercontent.com%2FDajwitt%2F5382905d489eb4275bd5b57c16ff1849%2Fraw%2Ftimer_und_abschaltung.yaml)      |
+| 🌀 Spülvorgang erkennen      | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F7b47fb55c00832db02cb799baef7181f%2Fedit)      |
+| 💧 Wassertank zurücksetzen   | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F70d522b2e358cca27c41e225abe3b458)     |
+| ⏱ Timer & Abschaltung        | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F5382905d489eb4275bd5b57c16ff1849)      |
 
 📑 Details zu allen Automationen findest du hier:
 📄 [♻️ Smart Coffee Autmationen im Detail.md](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%E2%99%BB%EF%B8%8F%20Smart%20Coffee%20Autmationen%20im%20Detail.md)
