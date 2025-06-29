@@ -19,7 +19,7 @@ Bitte beachte die folgenden essenziellen Punkte, um Fehler bei der Integration z
 Füge den folgenden Code-Abschnitt in den `template:`-Bereich deiner `configuration.yaml` ein:  
   
 💡 **Hinweis zur Anpassung des Wassertanksensors:** 
-Der Füllstand des Wassertanks wird automatisch in Prozent und verbleibenden Tassen berechnet. Du musst in beiden Sensoren lediglich **eine einzige Zeile** anpassen, um die maximale Kapazität deiner Maschine zu hinterlegen:
+Der Füllstand des Wassertanks wird automatisch in Prozent berechnet. Du musst lediglich **eine einzige Zeile** anpassen, um die maximale Kapazität deiner Maschine zu hinterlegen:
 
 ```jinja2
 {% set max_tassen = 5 %}
@@ -36,7 +36,7 @@ template:
         device_class: battery
         icon: mdi:eye
         state: >
-          {% set max_tassen = 5 %}
+          {% set max_tassen = 5 %} 
           {% set counter = states('counter.kaffeemaschine_zubereitungen') | int(0) %}
           {% set prozent = 100 - ((counter / max_tassen) * 100) %}
           {{ [prozent, 0] | max | round(0) }}
