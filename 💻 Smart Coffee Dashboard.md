@@ -1,36 +1,54 @@
-## 📲 Anleitung: Dashboard in Home Assistant importieren
+# 💻 Smart Coffee Dashboard
 
-### 🧾 Voraussetzung
-
-- Alle **Sensoren**, **Helfer**, **Timer** und **Automation**-Blueprints müssen vorher wie in den Anleitungen beschrieben eingebunden worden sein.
-- Dieses Dashboard dient der **Übersicht und Steuerung** der Kaffeemaschine und basiert exakt auf der empfohlenen Struktur.
-
+Diese Datei enthält die vollständige YAML-Konfiguration für das kompakte Dashboard der Home Assistant Smart Coffee Automation. Dieses Dashboard dient der Übersicht und Steuerung deiner Kaffeemaschine und ist exakt auf die empfohlene Projektstruktur abgestimmt.
 
 ---
 
-### 📁 Schritt-für-Schritt-Anleitung
+### 🧾 Voraussetzungen für die Nutzung des Dashboards
 
-#### 1. **Öffne Home Assistant**
+Bevor du dieses Dashboard importierst, stelle sicher, dass alle grundlegenden Komponenten wie in den jeweiligen Anleitungen beschrieben in Home Assistant eingebunden sind:
 
-Gehe in der Seitenleiste zu **Einstellungen → Dashboards → Dashboard hinzufügen**.
+* Alle Sensoren
+* Alle Helfer
+* Alle Timer
+* Alle Automation-Blueprints
 
-#### 2. **Neues Dashboard erstellen**
+- Das Dashboard nutzt Mushroom Cards und Custom Button Cards. Diese müssen gegebenenfalls über HACS in deiner Home Assistant Installation installiert werden:
+  - Mushroom Cards
+  - Button Card
+- Du kannst das Layout des Dashboards jederzeit nach deinen Wünschen anpassen. Die zugrunde liegende Logik der Automationen wird dadurch nicht beeinträchtigt
 
-- Name: z. B. `Kaffeemaschine`
-- Sichtbarkeit: Sichtbar lassen
-- Speichern
+---
 
-#### 3. **Dashboard öffnen und in den YAML-Modus wechseln**
+### 📁 Schritt-für-Schritt-Anleitung zum Import des Dashboards
 
-- Öffne das neu erstellte Dashboard
-- Oben rechts auf ✏ klicken → **"Dashboard bearbeiten"**
-- Wieder oben rechts auf `⋮` → **"Raw-Konfigurationseditor"**
+Befolge diese Schritte, um das Dashboard in deine Home Assistant Installation zu importieren:
 
-#### 4. **Inhalte einfügen**
+#### 1. Home Assistant öffnen
 
-- **Kopiere den gesamten Inhalt** 
+Navigiere in der Seitenleiste zu Einstellungen → Dashboards.
 
-```
+#### 2. Neues Dashboard erstellen
+
+Klicke auf Dashboard hinzufügen und gib die folgenden Informationen ein:
+
+* Name: Gib einen Namen ein, z.B. Kaffeemaschine
+* Sichtbarkeit: Lasse es auf "Sichtbar"
+* Klicke auf Speichern
+
+#### 3. Dashboard öffnen und in den YAML-Modus wechseln
+
+* Öffne das soeben erstellte Dashboard.
+* Klicke oben rechts auf das Stift-Symbol (✏), um das Dashboard zu bearbeiten.
+* Klicke dann wieder oben rechts auf die drei Punkte (⋮) und wähle "Raw-Konfigurationseditor" aus.
+
+#### 4. Inhalte einfügen
+
+* Kopiere den gesamten Inhalt des nachfolgenden YAML-Blocks.
+* Ersetze den vorhandenen YAML-Inhalt im Raw-Konfigurationseditor komplett durch den kopierten Code.
+* Klicke auf Speichern.
+
+```yaml
 views:
   - type: sections
     max_columns: 4
@@ -244,30 +262,17 @@ views:
         type: markdown
         text_only: true
         content: '# Kaffeemaschine  ✨'
-
 ```
 
-- Ersetze den vorhandenen YAML-Inhalt komplett damit
-- **Speichern**
+---
 
-#### 5. **Fertig!**
+#### 🎯 5. Fertig!
 
-Du kannst das Dashboard jetzt sofort nutzen. Alle relevanten Karten und Abschnitte wie:
+Nach dem Speichern kannst du das Dashboard sofort nutzen. Alle relevanten Karten und Abschnitte, die du für die Steuerung und Übersicht deiner Kaffeemaschine benötigst, sind bereits vollständig eingebunden:
 
 - Maschinenstatus
 - Stromverbrauch
 - Spülvorgang
 - Wassertankanzeige
-- Statistik
+- Statistiken
 - Timer-Steuerung
-
-…sind bereits **vollständig eingebunden**.
-
----
-
-### ℹ️ Hinweise
-
-- Das Dashboard nutzt **Mushroom Cards** und **Custom Button Cards** – diese müssen ggf. über **HACS** installiert werden:
-  - `Mushroom Cards`
-  - `Button Card`
-- Du kannst das Layout jederzeit anpassen – die Logik der Automationen wird dadurch **nicht beeinträchtigt**.
