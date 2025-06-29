@@ -81,9 +81,9 @@ Analysiert die in der vorherigen Automation gespeicherte Zubereitungsdauer und b
 
 ### Funktion
 
-Diese Automation überwacht den Kaffezubereitungs Zähler und wertet seinen Status aus. Sobald der Zähler über 5 steigt, löst die Automation eine Benachrichtigung aus, dass der Wasertank leer ist und startet einen 5 Minuten Timmer. In diesen 5 Minuten hast du genügend Zeit den Wassertank neu zu befüllen. Setzt du den Wassertank wieder ein, wird der Zubereitungszähler auf Null zurückgesetzt und im Dashboard wird 100 % angezeigt.
+Diese Automation überwacht den Kaffezubereitungs Zähler und wertet seinen Status aus. Sobald der Zähler über 5 steigt, startet einen 5 Minuten Timmer und die Automation schaltet eine trigger ein der für benachrichtigungen genutzt werden kann. (z.B der Wasertank ist leer) In diesen 5 Minuten hast du genügend Zeit den Wassertank neu zu befüllen. Setzt du den Wassertank wieder ein, wird der Zubereitungszähler auf Null zurückgesetzt und im Dashboard wird 100 % angezeigt.
 
-Solltest du den Wassertank nicht innerhalb der 5 Minuten Nachfüllen, schaltet sich die Maschine aus. Das ist eine weiter indirekte erinnerung, dass der Wassertank leer ist. Schaltest du die Maschine wieder ein und der Zubereitungszähler ist immer noch über 5 bekommst du eine weitere Benachrichtiging.
+Solltest du den Wassertank nicht innerhalb der 5 Minuten Nachfüllen, schaltet sich die Maschine aus. Das ist eine weiter indirekte erinnerung, dass der Wassertank leer ist. Schaltest du die Maschine wieder ein und der Zubereitungszähler ist immer noch über 5 bekommst du eine weitere Benachrichtiging. Auch hier wird wieder der trigger eingeschalten für die Benachrichtigung.
 
 Du kannst jetzt trotzdem einen Kaffee zubereiten, aber deine Tasse wird vielleicht nicht ganz voll.
 
@@ -103,12 +103,14 @@ Schaltet die Kaffeemaschine automatisch ab, wenn **längere Zeit keine Nutzung**
 
 - **Timer 1: Abschalt-Timer (z. B. 40 Minuten)**
   - Wird nach jeder Zubereitung gestartet
+  - Läuft der Timer ab wird ein helfer für 5 sekunden eingeschaltet der als trigger für benachrichtigungen genutzt werden kann
 - **Timer 2: Vorwarn-Timer (z. B. 15 Minuten)**
   - Wird nach Ablauf von Timer 1 gestartet
 - **Wenn Timer 2 ebenfalls abläuft**
   - Kaffeemaschine wird **kurz aus- und wieder eingeschaltet**
   - Dadurch wird KEIN Spülvorgang ausgelöst
 
+Hinweis: Ich habe mich extra gegen das spülen vor der automatiscen abschaltung entschieden. wenn du das spülen vor dem stanby nicht verhindern möchtest, stelle die gesamtdauer beider timer so ein das die abschaltung nach dem spülen greift.
 ### Ziel
 
 Automatische Abschaltung **ohne Spülen** Die Maschiene kann auch nach dem Spülen und auomatischen Ausschalten vom Strom getrennt werden.
@@ -118,6 +120,6 @@ Automatische Abschaltung **ohne Spülen** Die Maschiene kann auch nach dem Spül
 ## 🔗 Hinweise zur Nutzung
 
 - Alle Automationen sind als **Blueprints** verfügbar.
-- Das Zusammenspiel funktioniert nur, wenn **alle Helfer, Sensoren und Timer exakt übernommen werden**
+- Das Zusammenspiel funktioniert nur, wenn **alle Helfer, Sensoren und Automationen exakt übernommen werden**
 
 **Bitte folge exakt der Anleitung, damit alle Verknüpfungen zwischen den Automationen korrekt greifen.**
