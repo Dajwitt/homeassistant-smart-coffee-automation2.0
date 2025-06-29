@@ -75,7 +75,7 @@ sensor:
 
 💡 **Wichtiger Tipp:** Falls du bereits andere `sensor:`-Einträge in deiner `configuration.yaml` hast, **ergänze** diese einfach um die oben genannten Sensoren. Den `sensor:`-Abschnitt benötigst du in der gesamten Datei **nur einmal**.
 
-⚠️ Starte Home Assistant neu!
+⚠️ **Starte Home Assistant neu!**
 
 ---
 
