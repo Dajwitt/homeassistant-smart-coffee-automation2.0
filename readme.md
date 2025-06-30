@@ -121,7 +121,7 @@ Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine.
 
 
 <p align="center">
-  <img src="https://github.com/Dajwitt/dajwitt_workplace2/blob/main/Screenshot%202025-06-29%2020.51.34.png?raw=true" width="600"/>
+  <img src="https://github.com/Dajwitt/picture/blob/main/dashboard_1_0.png?raw=true" width="600"/>
 </p>
 
 ---
