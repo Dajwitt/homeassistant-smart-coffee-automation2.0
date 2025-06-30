@@ -30,7 +30,7 @@ Jede Kaffeemaschine hat leicht unterschiedliche Zubereitungszeiten für normale 
    * **Scrolle im Editor ganz nach unten**. Dort findest du den Abschnitt **"Variablen"**. Hier sind die Werte für die minimale und maximale Zubereitungsdauer für normale und große Tassen direkt als Eingabefelder verfügbar.
   
 <p align="center">
-  <img src="https://github.com/Dajwitt/dajwitt_workplace2/blob/main/kaffeezubereitung_erkennen.png?raw=true" width="600"/>
+  <img src="https://github.com/Dajwitt/picture/blob/main/kaffeezubereitung_erkennen.png?raw=true" width="600"/>
 </p>
 
 
