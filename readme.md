@@ -115,13 +115,13 @@ Alle Automationen sind als **Blueprints** verfügbar.
 
 ## 💻 Schritt 5: Dashboard importieren
 
-Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine. „So sieht dein Dashboard nach einigen Tagen aus“
+Das kompakte Dashboard gibt dir volle Kontrolle über deine Kaffeemaschine. „So sieht dein Dashboard nach einigen Zubereitungen aus“
 
 📑 Details zu Dashboard findest du hier: [💻 Smart Coffee Dashboard.md](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%92%BB%20Smart%20Coffee%20Dashboard.md)
 
 
 <p align="center">
-  <img src="https://github.com/Dajwitt/picture/blob/main/dashboard_1_0.png?raw=true" width="600"/>
+  <img src="https://github.com/Dajwitt/picture/blob/main/smart_coffee_dashboard_1_1.png?raw=true" width="600"/>
 </p>
 
 ---
