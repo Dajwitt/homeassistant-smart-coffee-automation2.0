@@ -20,10 +20,7 @@ Die beiden Helfer **Sprachbenachrichtigung auslösen Wassertank** und **Sprachbe
 
 Damit dir die Benachrichtigungen tatsächlich zugestellt werden, musst du **zusätzlich eine eigene Automation erstellen**. 
 
----
-
-**Eine Anleitung dazu findest du hier:**
-[Link folgt]
+**Eine Anleitung dazu findest du hier:** 📢  [Smart Coffee Automation Benachrichtigung](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%93%A2%20Smart%20Coffee%20Automation%20Benachrichtigung.md)
 
 ---
 
