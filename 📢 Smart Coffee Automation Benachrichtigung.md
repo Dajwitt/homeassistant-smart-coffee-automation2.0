@@ -34,7 +34,7 @@ Die in diesem Projekt vorgesehenen Standard-Benachrichtigungen sind derzeit nur 
 Du hast **volle Kontrolle** über die Benachrichtigungen:
 
 - ✅ **Optional:**
-  - Ignoriere die `input_boolean`-Trigger oder deaktiviere die Benachrichtigungs-Automation, wenn du keine Benachrichtigungen erhalten möchtest
+  - Ignoriere die `input_boolean`-Trigger oder deaktiviere die Benachrichtigungs-Automation, wenn du keine Benachrichtigungen erhalten möchtest.
 - ➕ **Erweiterbar:**
   - Weitere Ereignisse kannst du leicht hinzufügen – einfach neue `input_boolean`-Trigger und Aktionen ergänzen.
 - 🧷 **Direkt integrierbar:**
@@ -66,7 +66,7 @@ Du hast **volle Kontrolle** über die Benachrichtigungen:
 ## ✏️ YAML-Code der zentralen Benachrichtigung
 
 ```yaml
-alias: Benachrichtigung für Vorwarung und Wassertank
+alias: Benachrichtigung für Vorwarnung und Wassertank
 description: ""
 triggers:
   - trigger: state
