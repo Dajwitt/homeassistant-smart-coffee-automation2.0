@@ -112,3 +112,6 @@ actions:
                 method: all
 mode: single
 ```
+---
+
+Gehe zurück zu 📦 [Smart Coffee Helfer](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/blob/main/%F0%9F%93%A6%20Smart%20Coffee%20Helfer.md#-anleitung-zur-integration-der-helfer)
