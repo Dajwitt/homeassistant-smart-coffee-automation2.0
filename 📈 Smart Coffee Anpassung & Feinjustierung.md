@@ -44,7 +44,7 @@ Jede Kaffeemaschine hat leicht unterschiedliche Zubereitungszeiten für normale 
    * **Scrolle im Editor etwas nach unten** zum Abschnitt **"Variablen"**. Dort findest du den Schwellenwert, der zur Erkennung der Tassengröße verwendet wird.
 
 <p align="center">
-  <img src="https://github.com/Dajwitt/dajwitt_workplace2/blob/main/kaffeegroesse_erkennen.png?raw=true" width="600"/>
+  <img src="https://github.com/Dajwitt/picture/blob/main/kaffeezubereitung_erkennen.png?raw=true" width="600"/>
 </p>
 
    * Passe den Zahlenwert in diesem Feld entsprechend deinen ermittelten Zeiten an. Dieser Wert definiert, ab welcher Zubereitungsdauer eine Tasse als "groß" gezählt wird. Auch hier solltest du einen kleinen Puffer einplanen.
