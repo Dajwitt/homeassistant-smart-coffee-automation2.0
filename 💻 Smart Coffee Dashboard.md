@@ -64,40 +64,99 @@ views:
           - type: tile
             entity: switch.kaffeemschine
             features_position: bottom
-            vertical: false
+            vertical: true
             tap_action:
               action: toggle
             hide_state: false
             name: Kaffeemaschine
             grid_options:
-              columns: 12
+              columns: 6
               rows: 1
           - type: tile
             entity: sensor.kaffeemaschine_power
             features_position: bottom
-            vertical: false
-            name: Kaffeemaschine
+            vertical: true
             grid_options:
-              columns: 12
+              columns: 6
               rows: 1
+            hide_state: false
+            show_entity_picture: false
+            name: Verbrauch
           - type: tile
             entity: input_boolean.kaffeemaschine_spuelvorgang_aktiv
             features_position: bottom
-            vertical: false
+            vertical: true
             grid_options:
-              columns: 12
+              columns: 6
               rows: 1
             icon: mdi:water
+            name: Spühlvorgang aktiv
+            hide_state: false
           - type: tile
             features_position: bottom
-            vertical: false
+            vertical: true
             grid_options:
-              columns: 12
+              columns: 6
               rows: 1
             entity: input_boolean.zubereitung_erkannt_statistik
             name: Zubereitung erkannt
-            hide_state: true
+            hide_state: false
             color: accent
+      - type: grid
+        cards:
+          - type: heading
+            icon: mdi:chart-bar-stacked
+            heading: Statistik
+            heading_style: title
+          - type: tile
+            entity: counter.kaffeemaschine_zubereitungen
+            features_position: bottom
+            vertical: true
+            grid_options:
+              columns: 6
+              rows: 1
+            name: Zubereitungen
+          - type: tile
+            entity: input_text.kaffeemaschine_letzte_tassengroesse
+            features_position: bottom
+            vertical: true
+            grid_options:
+              columns: 6
+              rows: 1
+            hide_state: false
+            name: 'Letzte Tasse '
+          - type: tile
+            entity: sensor.kaffee_heute
+            features_position: bottom
+            vertical: false
+            grid_options:
+              columns: 6
+              rows: 1
+            name: Heute
+          - type: tile
+            entity: sensor.kaffee_diese_woche
+            features_position: bottom
+            vertical: false
+            grid_options:
+              columns: 6
+              rows: 1
+            name: Woche
+          - type: tile
+            entity: counter.kaffeemaschine_tasse_normal
+            features_position: bottom
+            vertical: false
+            grid_options:
+              columns: 6
+              rows: 1
+            name: 1 Tasse
+          - type: tile
+            entity: counter.kaffeemaschine_tasse_gross
+            features_position: bottom
+            vertical: false
+            grid_options:
+              columns: 6
+              rows: 1
+            name: 2 Tassen
       - type: grid
         cards:
           - type: heading
@@ -135,7 +194,7 @@ views:
                 - justify-self: center
                 - animation: |
                     [[[
-                      return parseInt(entity.state) < 20 ? "blink-slow 1.5s infinite" : "none";
+                      return parseInt(entity.state) < 25 ? "blink-slow 1.5s infinite" : "none";
                     ]]]
               state:
                 - font-size: 1.4em
@@ -144,7 +203,7 @@ views:
                 - justify-self: center
                 - animation: |
                     [[[
-                      return parseInt(entity.state) < 20 ? "blink-slow 1.5s infinite" : "none";
+                      return parseInt(entity.state) < 25 ? "blink-slow 1.5s infinite" : "none";
                     ]]]
             extra_styles: |
               @keyframes blink-slow {
@@ -155,52 +214,11 @@ views:
           - type: tile
             entity: binary_sensor.wassertank_contact
             grid_options:
-              columns: 12
-              rows: 1
+              columns: 6
+              rows: 2
             features_position: bottom
-            vertical: false
+            vertical: true
             name: Wassertank
-      - type: grid
-        cards:
-          - type: heading
-            icon: mdi:chart-bar-stacked
-            heading: Statistik
-            heading_style: title
-          - type: tile
-            entity: counter.kaffeemaschine_zubereitungen
-            features_position: bottom
-            vertical: false
-            grid_options:
-              columns: 12
-              rows: 1
-          - type: tile
-            entity: sensor.kaffee_heute
-            features_position: bottom
-            vertical: false
-            grid_options:
-              columns: 12
-              rows: 1
-          - type: tile
-            entity: sensor.kaffee_diese_woche
-            features_position: bottom
-            vertical: false
-            grid_options:
-              columns: 12
-              rows: 1
-          - type: tile
-            entity: counter.kaffeemaschine_tasse_normal
-            features_position: bottom
-            vertical: false
-            grid_options:
-              columns: 12
-              rows: 1
-          - type: tile
-            entity: counter.kaffeemaschine_tasse_gross
-            features_position: bottom
-            vertical: false
-            grid_options:
-              columns: 12
-              rows: 1
       - type: grid
         cards:
           - type: heading
@@ -214,6 +232,7 @@ views:
             grid_options:
               columns: 12
               rows: 1
+            color: green
           - type: tile
             entity: timer.kaffeemaschine_standby_vorwarnung
             features_position: bottom
@@ -221,6 +240,7 @@ views:
             grid_options:
               columns: 12
               rows: 1
+            color: accent
           - type: tile
             entity: timer.kaffeemaschine_wasser_nachfuell_prompt
             features_position: bottom
@@ -228,6 +248,7 @@ views:
             grid_options:
               columns: 12
               rows: 1
+            color: red
       - type: grid
         cards:
           - type: heading
@@ -283,7 +304,9 @@ views:
       card:
         type: markdown
         text_only: true
-        content: '# Kaffeemaschine  ✨'
+        content: '# Kaffeemaschine ☕'
+    icon: mdi:coffee-outline
+
 
 ```
 
