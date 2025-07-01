@@ -27,9 +27,13 @@ Diese Automation ist entscheidend, um zu vermeiden, dass die automatischen Spül
 ### Ablauf
 
 * **Auslöser:** Die Automation startet, wenn der Stromverbrauch der Kaffeemaschine **über 500 W** liegt.
+  
 * **Bedingung:** Beide Abschalt-Timer (`Standby-Vorwarnung` und `Idle-Ausschalt-Timer`) müssen den Status `idle` (inaktiv) haben. Dies stellt sicher, dass der Stromanstieg nicht von einer echten Kaffeezubereitung herrührt.
+  
 * **Aktion:** Der Hilfs-Boolean `spuelvorgang_aktiv` wird auf **`on`** gesetzt.
+  
 * **Beendigung:** Nach **55 Sekunden** wird dieser Boolean automatisch wieder auf **`off`** zurückgesetzt.
+  
 * **Timer-Reset:** Gleichzeitig wird der `Idle-Ausschalt-Timer` erneut gestartet, um den Energiesparzyklus aufrechtzuerhalten und die Maschine nach einer gewissen Inaktivität wieder abzuschalten.
 
 ### Hintergrund
@@ -47,13 +51,20 @@ Diese Automation zählt jede tatsächliche Kaffeezubereitung basierend auf dem S
 ### Ablauf
 
 * **Auslöser:** Die Automation wird ausgelöst, sobald die **Leistungsaufnahme über 1000 W** steigt.
+  
 * **Bedingung:** Der Boolean `spuelvorgang_aktiv` muss für mindestens **5 Sekunden `off`** sein. Dies ist eine wichtige Sicherheitsabfrage, um sicherzustellen, dass der Stromanstieg nicht von einem Spülvorgang herrührt und fälschlicherweise als Zubereitung gezählt wird.
+  
 * **Zählung der Brühdauer:** Innerhalb einer Schleife wird **jede Sekunde die Dauer der Kaffeezubereitung erfasst, solange der Stromverbrauch über 1000 W bleibt und kein Spülvorgang aktiv ist**. Dies ist entscheidend, da es bei der Kaffeezubereitung zu Schwankungen im Stromverbrauch kommen kann. Durch die kontinuierliche Messung über 1000 W wird eine bessere und zuverlässigere Dauer der tatsächlichen Zubereitung erkannt.
+  
 * **Speicherung:** Nach Abschluss des Brühvorgangs wird diese gemessene Dauer im Helfer `kaffeemaschine_letzte_bruehdauer` gespeichert.
+  
 * **Zweite Sicherheitsabfrage & Auswertung:** Es erfolgt eine erneute Prüfung, ob `spuelvorgang_aktiv` **nicht aktiv** ist. Nur wenn diese Bedingung erfüllt ist, erfolgt die weitere Auswertung:
-    * **15–59 Sekunden Brühdauer:** Wird als 1 Tasse gewertet.
-    * **60–120 Sekunden Brühdauer:** Wird als 2 Tassen gewertet.
+  
+    * **15–59 Sekunden Brühdauer:** Wird als 1 Tasse (Normale Tasse) gewertet.
+    * **60–120 Sekunden Brühdauer:** Wird als 2 Tassen (Große Tasse) gewertet.
+      
 * **Statistik-Update:** Der Gesamt-Zubereitungszähler wird erhöht, und der Boolean `zubereitung_erkannt_statistik` wird auf `on` gesetzt, um die aktuelle Zubereitung im Dashboard für Statistiken anzuzeigen.
+  
 * **Zwischenspeicher-Reset:** Nach 10 Sekunden werden alle temporären Zwischenspeicher zurückgesetzt (z.B. `kaffeemaschine_bruehleistung_dauer` und `zubereitung_erkannt_statistik` werden auf 0 bzw. off gesetzt).
 
 ### Besonderheit
@@ -71,10 +82,14 @@ Diese Automation analysiert die von der vorherigen Automation (`Zubereitung erke
 ### Ablauf
 
 * **Auslöser:** Die Automation startet, sobald eine neue Zubereitungsdauer im Helfer `kaffeemaschine_letzte_bruehdauer` gespeichert wurde.
+  
 * **Bedingung:** Falls der Boolean `spuelvorgang_aktiv` auf `true` steht, wird die Automation **sofort abgebrochen**, um Fehlzählungen zu vermeiden.
+  
 * **Daueranalyse & Zählung:**
+  
     * Wenn die Brühdauer zwischen **15 und 59 Sekunden** liegt, wird der Counter `Normale Tasse` um eins erhöht.
     * Wenn die Brühdauer **60 Sekunden oder länger** ist, wird der Counter `Große Tasse` um eins erhöht.
+      
 * **Darstellung:** Das Ergebnis dieser Zählung wird im Dashboard übersichtlich dargestellt.
 
 ---
@@ -90,19 +105,32 @@ Diese Automation überwacht den Kaffeezubereitungs-Zähler und leitet daraus den
 Diese Automation reagiert auf mehrere Auslöser, um den Wassertank intelligent zu verwalten:
 
 * **Tank entnommen & wieder eingesetzt (`tank_entnommen`):**
+  
     * Wird der Wassertank für mindestens 10 Sekunden entnommen und dann wieder eingesetzt, wartet die Automation kurz, ob der Tank wieder eingesetzt wird.
     * Anschließend wird der Kaffeezubereitungszähler (`counter.kaffeemaschine_zubereitungen`) auf Null zurückgesetzt. Im Dashboard wird dann wieder 100 % Füllstand angezeigt.
+      
 * **Zähler über Maximum (`zaehler_ueber_max`):**
+  
     * Wenn der Kaffeezubereitungszähler einen vordefinierten Schwellenwert (standardmäßig **5 Tassen**) überschreitet, wird der Timer `timer.kaffeemaschine_wasser_nachfuell_prompt` gestartet. Dieser Timer ist standardmäßig auf 5 Minuten eingestellt.
+      
     * Gleichzeitig wird der Boolean `input_boolean.sprachbenachrichtigung_ausloeser_wassertank` für 5 Sekunden auf `on` gesetzt, um dich auf den wahrscheinlich leeren Wassertank hinzuweisen. Du hast nun 5 Minuten Zeit, den Wassertank zu befüllen.
+      
 * **Zähler unter 1 (`zaehler_unter_1`):**
+  
     * Wenn der Zähler auf 0 zurückgesetzt wird (z.B. nach dem Nachfüllen), und der `timer.kaffeemaschine_wasser_nachfuell_prompt` aktiv ist, wird dieser Timer abgebrochen.
+      
 * **Maschine eingeschaltet & Zähler über Maximum (`verbrauch_erkannt` mit zusätzlichen Bedingungen):**
+  
     * Wenn der Stromverbrauch der Kaffeemaschine für 5 Sekunden über 50 W liegt (was ein Einschalten und Aktivität signalisiert) UND
+      
     * der Kaffeezubereitungszähler über 5 Tassen liegt (also der Tank als leer gilt) UND
+      
     * beide Abschalt-Timer (`timer.kaffeemaschine_idle_ausschalt_timer` und `timer.kaffeemaschine_standby_vorwarnung`) im Status `idle` (inaktiv) sind (was bedeutet, dass die Maschine nicht gerade in einem normalen Abschaltzyklus ist), DANN:
+      
         * Wird der `input_boolean.sprachbenachrichtigung_ausloeser_wassertank` für 5 Sekunden auf `on` gesetzt, um dich erneut an das Nachfüllen des Wassertanks zu erinnern.
+          
 * **Wassertank-Timer abgelaufen (`wasser_timer_abgelaufen`):**
+  
     * Wenn der `timer.kaffeemaschine_wasser_nachfuell_prompt` von `active` auf `idle` wechselt (d.h., der 5-Minuten-Timer ist abgelaufen und der Tank wurde nicht gefüllt), DANN:
         * Wird die Kaffeemaschine ausgeschaltet (`switch.kaffeemschine`). Dies dient als finale Erinnerung, den Wassertank zu füllen.
 
