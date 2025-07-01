@@ -11,9 +11,12 @@
 
 Die in diesem Projekt vorgesehenen Standard-Benachrichtigungen sind derzeit nur in folgenden Kern-Automationen integriert:
 
-- ⏳ **Timer & Abschaltung** 
+- ⏳ **Timer & Abschaltung**
+  
   - Vorwarnung, bevor die Kaffeemaschine in den Standby-Modus wechselt.
+    
 - 💧 **Wassertank überwachen & Zähler zurücksetzen**
+  
   - Erinnerung zum Nachfüllen des Wassers.
 
 ---
@@ -21,10 +24,13 @@ Die in diesem Projekt vorgesehenen Standard-Benachrichtigungen sind derzeit nur 
 ## 🧩 Funktionsweise
 
 - **🔔 Auslöser (Trigger):**
+  
   - Bestimmte `input_boolean`-Helfer wie  
     `input_boolean.sprachbenachrichtigung_ausloeser_wassertank`  
     werden von zwei Automationen auf `on` gesetzt → signalisiert, dass eine Benachrichtigung gesendet werden soll.
+  
 - **🎬 Reaktion (Aktion):**
+  
   - Die zentrale Benachrichtigungs-Automation sendet je nach aktiviertem `input_boolean` eine Nachricht über den konfigurierten Benachrichtigungsdienst.
 
 ---
@@ -34,16 +40,27 @@ Die in diesem Projekt vorgesehenen Standard-Benachrichtigungen sind derzeit nur 
 Du hast **volle Kontrolle** über die Benachrichtigungen:
 
 - ✅ **Optional:**
+  
   - Ignoriere die `input_boolean`-Trigger oder deaktiviere die Benachrichtigungs-Automation, wenn du keine Benachrichtigungen erhalten möchtest.
+    
 - ➕ **Erweiterbar:**
+  
   - Weitere Ereignisse kannst du leicht hinzufügen – einfach neue `input_boolean`-Trigger und Aktionen ergänzen.
+    
 - 🧷 **Direkt integrierbar:**
+  
   - Alternativ kannst du Benachrichtigungen **direkt in jede Automation** einbauen (z. B. „Spülvorgang erkennen“, „Kaffeezubereitung erkennen“).
-- 📡 **Geräteunabhängig:**  
+    
+- 📡 **Geräteunabhängig:**
+  
   Standardmäßig wird Alexa (`notify.alexa_media_echo_wohnzimmer`) genutzt – du kannst aber jeden anderen Dienst wie:
+
   - 📱 Companion App
+    
   - 📨 E-Mail
+    
   - 💬 Telegram
+    
   - 🖥️ Dashboard (persistente Benachrichtigungen)
 
   verwenden. Einfach `notify.` und `target` anpassen.
