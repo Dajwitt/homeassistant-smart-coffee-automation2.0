@@ -23,7 +23,7 @@ Dieses Projekt basiert auf einem **DeLonghi Magnifica S Kaffeevollautomaten**. D
 
  ✅ Wassertanküberwachung  
  
- ✅ Differenzierung zwischen 1 und 2 Tassen  
+ ✅ Differenzierung zwischen normale und große Tassen  
  
  ✅ Zählung aller Vorgänge (inkl. täglicher & wöchentlicher Statistik)  
  
@@ -92,7 +92,7 @@ Hier werden die Template-Sensoren, Binary-Sensoren und Statistiken angelegt:
 Jede Automation hat eine ganz bestimmte Aufgabe innerhalb der Logik:
 
 * **☕ Kaffeezubereitung erkennen**: Erkennt zuverlässig den Start einer Zubereitung anhand der Leistungsaufnahme.
-* **🍵 Tassengröße erkennen**: Unterscheidet zwischen 1-Tassen- und 2-Tassen-Zubereitungen basierend auf der Laufzeit.
+* **🍵 Tassengröße erkennen**: Unterscheidet zwischen Normale-Tassen- und Große-Tassen-Zubereitungen basierend auf der Laufzeit.
 * **🌀 Spülvorgang erkennen**: Filtert automatische Spülungen nach dem Einschalten zuverlässig aus.
 * **💧 Wassertank zurücksetzen**: Setzt einen Zähler zurück, wenn der Tank aufgefüllt wurde – Voraussetzung ist ein Sensor.
 * **⏱ Timer & Abschaltung**: Erkennt, wenn die Maschine im Leerlauf ist, und schaltet sie dann automatisch aus.
