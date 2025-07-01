@@ -48,30 +48,12 @@ Nun kannst du die Automation manuell bearbeiten.
 
 ### Wo stelle ich die Benachrichtigungen ein?
 
+Gehe zurück zu 📦 Smart Coffee Helfer
 
 #### ☕ Automation: **Timer & Abschaltung**
 
 Unter **Option 2 – „Wenn ausgelöst durch 40 Minuten abgelaufen“** kannst du eine Benachrichtigung hinzufügen, die dich informiert, dass sich die Maschine **bald automatisch abschaltet**.
 
-👉 So richtest du sie ein:
-
-1. Öffne die Automation **Timer & Abschaltung**
-2. Scrolle zur **Aktionenliste**
-3. Klicke auf **„Aktion hinzufügen“**
-4. Wähle deine bevorzugte Benachrichtigungsmethode (z. B. **App**, **Sprachausgabe**, **Push-Nachricht**)
-
-#### 💧 Automation: **Wassertank überwachen – Zähler zurücksetzen**
-
-Hier kannst du unter:
-
-- **Option 2 – Wenn ausgelöst durch** `zaehler_ueber_5`
-- **Option 6 – z. B. bei erkanntem Verbrauch mit leerem Tank**
-
-eine Benachrichtigung einrichten, die dich warnt, dass der **Wassertank leer** ist.
-
-👉 Auch hier einfach eine Aktion hinzufügen und die gewünschte Methode wählen.
-
-💡 **Hinweis:**  
-Benachrichtigungen lassen sich **ganz flexibel auch in anderen Automationen integrieren** – je nach Bedarf. Deiner Kreativität sind dabei keine Grenzen gesetzt.
+👉 So richtest du sie ein 📢 [Benachrichtigungen für Warnungen und Hinweise](https://github.com/Dajwitt/homeassistant-smart-coffee-automation2.0/edit/main/%F0%9F%93%A2%20Smart%20Coffee%20Automation%20Benachrichtigung.md).
 
 ---
