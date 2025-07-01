@@ -13,9 +13,11 @@ Bevor du dieses Dashboard importierst, stelle sicher, dass alle grundlegenden Ko
 * Alle Timer
 * Alle Automation-Blueprints
 
-- Das Dashboard nutzt Mushroom Cards und Custom Button Cards. Diese müssen gegebenenfalls über HACS in deiner Home Assistant Installation installiert werden:
-  - Mushroom Cards
-  - Button Card
+- Das Dashboard nutzt **Mushroom Cards** und **Custom Button Cards**. Diese müssen gegebenenfalls über HACS in deiner Home Assistant Installation installiert werden:
+  
+  * Mushroom Cards
+  * Button Card
+    
 - Du kannst das Layout des Dashboards jederzeit nach deinen Wünschen anpassen. Die zugrunde liegende Logik der Automationen wird dadurch nicht beeinträchtigt
 
 ---
