@@ -69,6 +69,11 @@ input_number:
     step: 1
     unit_of_measurement: s
 
+input_text:
+  kaffeemaschine_letzte_tassengroesse:
+    name: Letzte Tassengröße
+    icon: mdi:coffee
+
 counter:
 
   kaffeemaschine_zubereitungen:
