@@ -23,6 +23,18 @@ Jede Kaffeemaschine hat leicht unterschiedliche Zubereitungszeiten für normale 
 
 ---
 
+### Wie übernehme ich die Kontrolle über die Blueprint-Automation?
+
+1. Öffne **Einstellungen → Automationen & Szenen**
+2. Suche die Automation - z.B. **„Zubereitung erkennen“**
+3. Klicke oben rechts auf die **drei Punkte (⋮)**
+4. Wähle **„Kontrolle übernehmen“** und bestätige mit **Ja**
+5. Danach nochmal **speichern**
+
+Nun kannst du die Automation manuell bearbeiten.
+
+---
+
 2. **Automation "☕️ Zubereitung erkennen" anpassen:**
    
    * Gehe in Home Assistant zu **Einstellungen → Automationen & Szenen**.
