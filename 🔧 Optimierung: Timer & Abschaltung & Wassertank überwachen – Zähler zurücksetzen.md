@@ -1,4 +1,4 @@
-### ⏱ Timer & Abschaltung und 💧 Wassertank überwachen – Zähler zurücksetzen (Ab 10.0725)
+### ⏱ Timer & Abschaltung und 💧 Wassertank überwachen – Zähler zurücksetzen (Ab 10.07.25)
 
 ### 🐞 Problem
 
