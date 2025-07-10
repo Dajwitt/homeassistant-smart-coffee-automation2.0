@@ -1,4 +1,4 @@
-### ⏱ Timer & Abschaltung und 💧 Wassertank überwachen – Zähler zurücksetzen
+### ⏱ Timer & Abschaltung und 💧 Wassertank überwachen – Zähler zurücksetzen (Ab 10.0725)
 
 ### 🐞 Problem
 
@@ -40,7 +40,7 @@ input_boolean:
 
 #### 🛠 Schritt 3 – Automation 💧 Wassertank überwachen – Zähler zurücksetzen anpassen
 
-Der schnellste Weg: Nutze die optimierte 📥 **Blueprint**  [🔗 Link zur Blueprint](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://gist.github.com/Dajwitt/24050e09d1b8b191cce9dfcfa0660ccf)
+Der schnellste Weg: Nutze die optimierte 📥 **Blueprint**  [🔗 Blueprint importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://gist.github.com/Dajwitt/24050e09d1b8b191cce9dfcfa0660ccf)
 
 **Bearbeite Option 4 :** 
 
