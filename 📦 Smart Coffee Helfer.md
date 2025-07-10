@@ -51,6 +51,10 @@ input_boolean:
     name: Sprachbenachrichtigung auslösen Vorwarnung
     icon: mdi:message-bulleted
 
+  helfer_timer_abbrechen:
+    name: Helfer Timer abbrechen
+    icon: mdi:timer-cancel-outline
+
 input_number:
 
   kaffeemaschine_bruehleistung_dauer:
