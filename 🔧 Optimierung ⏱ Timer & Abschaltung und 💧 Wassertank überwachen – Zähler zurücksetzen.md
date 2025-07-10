@@ -32,8 +32,9 @@ input_boolean:
 
   > Nur wenn `input_boolean.helfer_timer_abbrechen` auf `off` steht, darf die Benachrichtigung gesendet werden.
 
-📸 Beispiel:  
- ![Screenshot 2025-07-10 09.50.05.png](.attachments.3972/Screenshot%202025-07-10%2009.50.05.png)
+<p align="center">
+  <img src="https://github.com/Dajwitt/picture/blob/main/timer%20%26%20abschaltung%20optimiert.png?raw=true" width="600"/>
+</p>
 
 ---
 
@@ -100,4 +101,7 @@ Der schnellste Weg: Nutze die optimierte 📥 **Blueprint**  [🔗 Link zur Blue
               entity_id: input_boolean.helfer_timer_abbrechen
 ```
 
-![image (2).png](.attachments.3972/image%20%282%29.png)
+<p align="center">
+  <img src="https://github.com/Dajwitt/picture/blob/main/wassertank%20optimiert.png?raw=true" width="600"/>
+</p>
+</p>
