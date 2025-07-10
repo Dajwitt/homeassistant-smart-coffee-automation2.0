@@ -105,7 +105,7 @@ Alle Automationen sind als **Blueprints** verfügbar.
 | ☕ Kaffeezubereitung erkennen | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F742f2a1b079aafa4c80e378e42038555) |
 | 🍵 Tassengröße erkennen      | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F9e9aa8203902c0265c80f30f64cc5911)    |
 | 🌀 Spülvorgang erkennen      | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F7b47fb55c00832db02cb799baef7181f%2Fedit)      |
-| 💧 Wassertank zurücksetzen   | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F70d522b2e358cca27c41e225abe3b458)     |
+| 💧 Wassertank zurücksetzen   | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https://gist.github.com/Dajwitt/24050e09d1b8b191cce9dfcfa0660ccf)     |
 | ⏱ Timer & Abschaltung        | [Importieren](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgist.github.com%2FDajwitt%2F5382905d489eb4275bd5b57c16ff1849)      |
 
 📑 Details zu allen Automationen findest du hier:
