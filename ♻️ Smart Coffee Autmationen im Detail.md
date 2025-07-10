@@ -140,7 +140,7 @@ Ein realistisches Tracking des Wasserverbrauchs und eine intelligente Erinnerung
 
 ---
 
-## ⏱️ 5. Timer-gesteuerte Abschaltung
+## ⏱️ 5. Timer & Abschaltung 
 
 ### Funktion
 
